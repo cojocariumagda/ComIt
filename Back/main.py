@@ -1,6 +1,8 @@
 import json
 import os
 import socket
+import string
+
 from bson import json_util
 import sys
 import re
@@ -159,7 +161,7 @@ def http_data_get(url, resursa, requestline, encoding='utf-8'):
 
 def facebook_post(message):
     try:
-        graph = facebook.GraphAPI(access_token="EAAIQW0NryWABAPhfx8nrljskYWPFZB7WtZBTAhdMHfDIBBExXBgOY26kZB0YK8cZAyn3PprTIedhbZAJCSyj2uAuKkTmifraIPY5Pqg0zieWiZBHBIYPm9jMFeZCPBiveDgk2o6gqRK98f9gUShILSpcyNjWmp0fZAAd3FiMjWyKE5E4ogJyTNHhEoZA5d1rfu3TpPfj53C2tUwZDZD", version="3.0")
+        graph = facebook.GraphAPI(access_token="EAAIQW0NryWABAF6hWtOsjiCGHZBhufNKoPi0PZCBjpLbCtyB4LBNXWM3fke0XTZAjCMczEqOFjvJtALVcUQ7Qp7TwoFA5YEHUn9jYzOkMqLz6PMFhNlSm9X58t9DFmKf9CphxLrufQeVTjuE2OM31hzrcdffaZBwvaoySzvoc32E7jFTh0ho4RZCTxhgAQ1kZD", version="3.0")
         graph.put_object(
            parent_object="109369880809577",
            connection_name="feed",
@@ -679,13 +681,36 @@ def get_price_fluctuation(request):
                 tag_evomag = True
             else:
                 tag_nothing = True
+
+        digits = string.digits
+        def check_contains_digit(string):
+            for chr in string:
+                if chr in digits:
+                    return True
+            return False
+
         if tag_emag == True:
             items_emag = db_comit_items_emag.find({'link_produs': link})
             if items_emag.count() == 0:
                 return None, 200, None
             else:
                 for item in items_emag:
-                    return json.dumps(item, default=json_util.default), 200, None
+                    new_item = item
+                    list_pret = []
+                    pret_produse = json.loads(new_item['pret_produs'])
+                    for i in range(len(pret_produse)):
+                        current_list = []
+                        for j in range(len(pret_produse[i])-1):
+                            if pret_produse[i][j] is not None:
+                                if check_contains_digit(pret_produse[i][j]) and len(pret_produse[i][j]) <= 10:
+                                    print convert_pret_to_float(pret_produse[i][j])
+                                    current_list.append(convert_pret_to_float(pret_produse[i][j]))
+                            else:
+                                current_list.append(None)
+                        current_list.append(pret_produse[i][2])
+                        list_pret.append(current_list)
+                    new_item['pret_produs'] = list_pret
+                    return json.dumps(new_item, default=json_util.default), 200, None
 
         if tag_evomag == True:
             items_evomag = db_comit_items_evomag.find({'link_produs': link})
@@ -693,7 +718,22 @@ def get_price_fluctuation(request):
                 return None, 200, None
             else:
                 for item in items_evomag:
-                    return json.dumps(item, default=json_util.default), 200, None
+                    new_item = item
+                    list_pret = []
+                    pret_produse = json.loads(new_item['pret_produs'])
+                    for i in range(len(pret_produse)):
+                        current_list = []
+                        for j in range(len(pret_produse[i]) - 1):
+                            if pret_produse[i][j] is not None:
+                                if check_contains_digit(pret_produse[i][j]) and len(pret_produse[i][j]) <= 10:
+                                    print convert_pret_to_float(pret_produse[i][j])
+                                    current_list.append(convert_pret_to_float(pret_produse[i][j]))
+                            else:
+                                current_list.append(None)
+                        current_list.append(pret_produse[i][2])
+                        list_pret.append(current_list)
+                    new_item['pret_produs'] = list_pret
+                    return json.dumps(new_item, default=json_util.default), 200, None
 
         if tag_nothing == True:
             return None, 200, None
