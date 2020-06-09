@@ -1,0 +1,431 @@
+<div class ="dropdownSecond">
+<<<<<<< HEAD
+                                        <a onclick="getEvomagCategory('Laptopuri si Tablete')" class = "dropbtnSecond" href="#produse"> Laptopuri si Tablete </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory(' Laptopuri / Notebook ')" href = "#produse"> Laptopuri / Notebook </a>
+                              <a onclick="getEvomagSubcategory('Tablete ')" href = "#produse">Tablete </a>
+                              <a onclick="getEvomagSubcategory('Huse Tablete ')" href = "#produse">Huse Tablete </a>
+                              <a onclick="getEvomagSubcategory('Folii Protectie Tablete ')" href = "#produse">Folii Protectie Tablete </a>
+                              <a onclick="getEvomagSubcategory('Stylus Pen ')" href = "#produse">Stylus Pen </a>
+                              <a onclick="getEvomagSubcategory('eBook Readere ')" href = "#produse">eBook Readere </a>
+                              <a onclick="getEvomagSubcategory('Alte accesorii laptop-uri ')" href = "#produse">Alte accesorii laptop-uri </a>
+                              <a onclick="getEvomagSubcategory('Accesorii mac ')" href = "#produse">Accesorii mac </a>
+                              <a onclick="getEvomagSubcategory('Extindere garantie ')" href = "#produse">Extindere garantie </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Telefoane mobile si Accesorii')" class = "dropbtnSecond" href="#produse"> Telefoane mobile si Accesorii </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Telefoane mobile ')" href = "#produse">Telefoane mobile </a>
+                              <a onclick="getEvomagSubcategory('Casti bluetooth, airpods si audio ')" href = "#produse">Casti bluetooth, airpods si audio </a>
+                              <a onclick="getEvomagSubcategory('Boxe Portabile cu Bluetooth ')" href = "#produse">Boxe Portabile cu Bluetooth </a>
+                              <a onclick="getEvomagSubcategory('Incarcatoare ')" href = "#produse">Incarcatoare </a>
+                              <a onclick="getEvomagSubcategory('Smartwatch ')" href = "#produse">Smartwatch </a>
+                              <a onclick="getEvomagSubcategory('Telefoane Seniori ')" href = "#produse">Telefoane Seniori </a>
+                              <a onclick="getEvomagSubcategory('Telefoane Fixe ')" href = "#produse">Telefoane Fixe </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('TV %26 Multimedia')" class = "dropbtnSecond" href="#produse"> TV & Multimedia </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('LED TV ')" href = "#produse">LED TV </a>
+                              <a onclick="getEvomagSubcategory('Sistem Home Cinema ')" href = "#produse">Sistem Home Cinema </a>
+                              <a onclick="getEvomagSubcategory('Soundbar ')" href = "#produse">Soundbar </a>
+                              <a onclick="getEvomagSubcategory('Sisteme Audio ')" href = "#produse">Sisteme Audio </a>
+                              <a onclick="getEvomagSubcategory('Player Multimedia ')" href = "#produse">Player Multimedia </a>
+                              <a onclick="getEvomagSubcategory('Centrale Home Center ')" href = "#produse">Centrale Home Center </a>
+                              <a onclick="getEvomagSubcategory('Prize inteligente ')" href = "#produse">Prize inteligente </a>
+                              <a onclick="getEvomagSubcategory('Senzori si Detectoare ')" href = "#produse">Senzori si Detectoare </a>
+                              <a onclick="getEvomagSubcategory('Accesorii tablete grafice ')" href = "#produse">Accesorii tablete grafice </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Componente PC %26amp; Gaming')" class = "dropbtnSecond" href="#produse"> Componente PC &amp; Gaming </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Placi Video ')" href = "#produse">Placi Video </a>
+                              <a onclick="getEvomagSubcategory('Solid-State Drive ')" href = "#produse">Solid-State Drive </a>
+                              <a onclick="getEvomagSubcategory('Procesoare ')" href = "#produse">Procesoare </a>
+                              <a onclick="getEvomagSubcategory('Placi de baza ')" href = "#produse">Placi de baza </a>
+                              <a onclick="getEvomagSubcategory('Jocuri Video - PC si Consola ')" href = "#produse">Jocuri Video - PC si Consola </a>
+                              <a onclick="getEvomagSubcategory('Console ')" href = "#produse">Console </a>
+                              <a onclick="getEvomagSubcategory('Accesorii console ')" href = "#produse">Accesorii console </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Calculatoare - Sisteme PC')" class = "dropbtnSecond" href="#produse"> Calculatoare - Sisteme PC </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('All In One PC ')" href = "#produse">All In One PC </a>
+                              <a onclick="getEvomagSubcategory('Calculatoare desktop ')" href = "#produse">Calculatoare desktop </a>
+                              <a onclick="getEvomagSubcategory('Calculatoare Refurbished ')" href = "#produse">Calculatoare Refurbished </a>
+                              <a onclick="getEvomagSubcategory('Servere ')" href = "#produse">Servere </a>
+                              <a onclick="getEvomagSubcategory('Procesoare Server ')" href = "#produse">Procesoare Server </a>
+                              <a onclick="getEvomagSubcategory('Placi de baza Server ')" href = "#produse">Placi de baza Server </a>
+                              <a onclick="getEvomagSubcategory('Memorii Server ')" href = "#produse">Memorii Server </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Monitoare')" class = "dropbtnSecond" href="#produse"> Monitoare </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Monitoare LED ')" href = "#produse">Monitoare LED </a>
+                              <a onclick="getEvomagSubcategory('Accesorii Monitoare ')" href = "#produse">Accesorii Monitoare </a>
+                              <a onclick="getEvomagSubcategory('Monitoare Refurbished ')" href = "#produse">Monitoare Refurbished </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Electrocasnice')" class = "dropbtnSecond" href="#produse"> Electrocasnice </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Aparate frigorifice ')" href = "#produse">Aparate frigorifice </a>
+                              <a onclick="getEvomagSubcategory('Frigidere ')" href = "#produse">Frigidere </a>
+                              <a onclick="getEvomagSubcategory('Combine frigorifice ')" href = "#produse">Combine frigorifice </a>
+                              <a onclick="getEvomagSubcategory('Congelatoare ')" href = "#produse">Congelatoare </a>
+                              <a onclick="getEvomagSubcategory('Cuptoare incorporabile ')" href = "#produse">Cuptoare incorporabile </a>
+                              <a onclick="getEvomagSubcategory('Aragazuri ')" href = "#produse">Aragazuri </a>
+                              <a onclick="getEvomagSubcategory('Aspiratoare cu sac ')" href = "#produse">Aspiratoare cu sac </a>
+                              <a onclick="getEvomagSubcategory('Aspiratoare fara sac ')" href = "#produse">Aspiratoare fara sac </a>
+                              <a onclick="getEvomagSubcategory('Aspiratoare robot ')" href = "#produse">Aspiratoare robot </a>
+                              <a onclick="getEvomagSubcategory('Cafetiere ')" href = "#produse">Cafetiere </a>
+                              <a onclick="getEvomagSubcategory('Espressoare ')" href = "#produse">Espressoare </a>
+                              <a onclick="getEvomagSubcategory('Rasnite ')" href = "#produse">Rasnite </a>
+                              <a onclick="getEvomagSubcategory('Masini de facut paine ')" href = "#produse">Masini de facut paine </a>
+                              <a onclick="getEvomagSubcategory('Multicooker ')" href = "#produse">Multicooker </a>
+                              <a onclick="getEvomagSubcategory('Slow cookere ')" href = "#produse">Slow cookere </a>
+                              <a onclick="getEvomagSubcategory('Dezumidificatoare ')" href = "#produse">Dezumidificatoare </a>
+                              <a onclick="getEvomagSubcategory('Umidificatoare ')" href = "#produse">Umidificatoare </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Imprimante')" class = "dropbtnSecond" href="#produse"> Imprimante </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Multifunctionale ')" href = "#produse">Multifunctionale </a>
+                              <a onclick="getEvomagSubcategory('Consumabile ')" href = "#produse">Consumabile </a>
+                              <a onclick="getEvomagSubcategory('Imprimante laser alb-negru ')" href = "#produse">Imprimante laser alb-negru </a>
+                              <a onclick="getEvomagSubcategory('Imprimante laser color ')" href = "#produse">Imprimante laser color </a>
+                              <a onclick="getEvomagSubcategory('Imprimante jet cerneala ')" href = "#produse">Imprimante jet cerneala </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Foto')" class = "dropbtnSecond" href="#produse"> Foto </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Carduri memorie ')" href = "#produse">Carduri memorie </a>
+                              <a onclick="getEvomagSubcategory('Aparate Foto Compacte ')" href = "#produse">Aparate Foto Compacte </a>
+                              <a onclick="getEvomagSubcategory('Rame Digitale ')" href = "#produse">Rame Digitale </a>
+                              <a onclick="getEvomagSubcategory('Obiective ')" href = "#produse">Obiective </a>
+                              <a onclick="getEvomagSubcategory('Binocluri ')" href = "#produse">Binocluri </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Video')" class = "dropbtnSecond" href="#produse"> Video </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Supraveghere video ')" href = "#produse">Supraveghere video </a>
+                              <a onclick="getEvomagSubcategory('Videoproiectoare ')" href = "#produse">Videoproiectoare </a>
+                              <a onclick="getEvomagSubcategory('Camere Video ')" href = "#produse">Camere Video </a>
+                              <a onclick="getEvomagSubcategory('Accesorii camere video pentru sporturi extreme ')" href = "#produse">Accesorii camere video pentru sporturi extreme </a>
+                              <a onclick="getEvomagSubcategory('Acumulatori Video ')" href = "#produse">Acumulatori Video </a>
+                              <a onclick="getEvomagSubcategory('Genti Video ')" href = "#produse">Genti Video </a>
+                              <a onclick="getEvomagSubcategory('Ecrane de proiectie ')" href = "#produse">Ecrane de proiectie </a>
+                              <a onclick="getEvomagSubcategory('Table interactive ')" href = "#produse">Table interactive </a>
+                              <a onclick="getEvomagSubcategory('Alte Accesorii Proiector ')" href = "#produse">Alte Accesorii Proiector </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Software')" class = "dropbtnSecond" href="#produse"> Software </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Sisteme operare PC ')" href = "#produse">Sisteme operare PC </a>
+                              <a onclick="getEvomagSubcategory('Aplicatii ')" href = "#produse">Aplicatii </a>
+                              <a onclick="getEvomagSubcategory('Antivirusi ')" href = "#produse">Antivirusi </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Retelistica')" class = "dropbtnSecond" href="#produse"> Retelistica </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Routere ')" href = "#produse">Routere </a>
+                              <a onclick="getEvomagSubcategory('Access point ')" href = "#produse">Access point </a>
+                              <a onclick="getEvomagSubcategory('Extendere Wi-Fi ')" href = "#produse">Extendere Wi-Fi </a>
+                              <a onclick="getEvomagSubcategory('Switch-uri ')" href = "#produse">Switch-uri </a>
+                              <a onclick="getEvomagSubcategory('Network Attached Storage ')" href = "#produse">Network Attached Storage </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('AUTO')" class = "dropbtnSecond" href="#produse"> AUTO </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Camere Video Auto ')" href = "#produse">Camere Video Auto </a>
+                              <a onclick="getEvomagSubcategory('Lazi frigorifice ')" href = "#produse">Lazi frigorifice </a>
+                              <a onclick="getEvomagSubcategory('Frigidere Auto ')" href = "#produse">Frigidere Auto </a>
+                              <a onclick="getEvomagSubcategory('Statii auto ')" href = "#produse">Statii auto </a>
+                              <a onclick="getEvomagSubcategory('Covorase Auto ')" href = "#produse">Covorase Auto </a>
+                              <a onclick="getEvomagSubcategory('Stergatoare ')" href = "#produse">Stergatoare </a>
+                              <a onclick="getEvomagSubcategory('Senzori de parcare ')" href = "#produse">Senzori de parcare </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Ingrijire personala')" class = "dropbtnSecond" href="#produse"> Ingrijire personala </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Tensiometre ')" href = "#produse">Tensiometre </a>
+                              <a onclick="getEvomagSubcategory('Termometre ')" href = "#produse">Termometre </a>
+                              <a onclick="getEvomagSubcategory('Glucometre ')" href = "#produse">Glucometre </a>
+                              <a onclick="getEvomagSubcategory('Epilatoare ')" href = "#produse">Epilatoare </a>
+                              <a onclick="getEvomagSubcategory('Epilatoare IPL ')" href = "#produse">Epilatoare IPL </a>
+                              <a onclick="getEvomagSubcategory('Aparate de tuns ')" href = "#produse">Aparate de tuns </a>
+                              <a onclick="getEvomagSubcategory('Aparate de ras electrice ')" href = "#produse">Aparate de ras electrice </a>
+                              <a onclick="getEvomagSubcategory('Aparate de tuns barba ')" href = "#produse">Aparate de tuns barba </a>
+                              <a onclick="getEvomagSubcategory('Periute de dinti electrice ')" href = "#produse">Periute de dinti electrice </a>
+                              <a onclick="getEvomagSubcategory('Irigatoare bucale si accesorii pentru dusul bucal ')" href = "#produse">Irigatoare bucale si accesorii pentru dusul bucal </a>
+                              <a onclick="getEvomagSubcategory('Rezerve periute ')" href = "#produse">Rezerve periute </a>
+                              <a onclick="getEvomagSubcategory('Uscatoare de par ')" href = "#produse">Uscatoare de par </a>
+                              <a onclick="getEvomagSubcategory('Placi de indreptat parul ')" href = "#produse">Placi de indreptat parul </a>
+                              <a onclick="getEvomagSubcategory('Ondulatoare ')" href = "#produse">Ondulatoare </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Sport %26amp; Fitness')" class = "dropbtnSecond" href="#produse"> Sport &amp; Fitness </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Biciclete Electrice ')" href = "#produse">Biciclete Electrice </a>
+                              <a onclick="getEvomagSubcategory('Trotinete Electrice ')" href = "#produse">Trotinete Electrice </a>
+                              <a onclick="getEvomagSubcategory('Hoverboard ')" href = "#produse">Hoverboard </a>
+                              <a onclick="getEvomagSubcategory('Bratari Fitness %26amp; Ceasuri Sportive ')" href = "#produse">Bratari Fitness &amp; Ceasuri Sportive </a>
+                              <a onclick="getEvomagSubcategory('Accesorii gadgeturi pentru monitorizare activitate ')" href = "#produse">Accesorii gadgeturi pentru monitorizare activitate </a>
+                              <a onclick="getEvomagSubcategory('Cantare de baie ')" href = "#produse">Cantare de baie </a>
+                              <a onclick="getEvomagSubcategory('Biciclete ')" href = "#produse">Biciclete </a>
+                              <a onclick="getEvomagSubcategory('Piese Biciclete si Accesorii ')" href = "#produse">Piese Biciclete si Accesorii </a>
+                              <a onclick="getEvomagSubcategory('Trotinete si Triciclete ')" href = "#produse">Trotinete si Triciclete </a>
+                              <a onclick="getEvomagSubcategory('Biciclete Fitness - Magntice %26amp; Eliptice ')" href = "#produse">Biciclete Fitness - Magntice &amp; Eliptice </a>
+                              <a onclick="getEvomagSubcategory('Benzi de alergat ')" href = "#produse">Benzi de alergat </a>
+                              <a onclick="getEvomagSubcategory('Steppere pentru Fitness ')" href = "#produse">Steppere pentru Fitness </a>
+                              <a onclick="getEvomagSubcategory('Aparate Fitness Multifunctionale ')" href = "#produse">Aparate Fitness Multifunctionale </a>
+                              <a onclick="getEvomagSubcategory('Aparate de vaslit ')" href = "#produse">Aparate de vaslit </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Mama si Copilul')" class = "dropbtnSecond" href="#produse"> Mama si Copilul </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Masti de protectie faciala ')" href = "#produse">Masti de protectie faciala </a>
+                              <a onclick="getEvomagSubcategory('Sterilizatoare si accesorii ')" href = "#produse">Sterilizatoare si accesorii </a>
+                              <a onclick="getEvomagSubcategory('Cantare ')" href = "#produse">Cantare </a>
+                              <a onclick="getEvomagSubcategory('Carucioare ')" href = "#produse">Carucioare </a>
+                              <a onclick="getEvomagSubcategory('Scaune Auto Copii si Inaltatoare ')" href = "#produse">Scaune Auto Copii si Inaltatoare </a>
+                              <a onclick="getEvomagSubcategory('Accesorii transport ')" href = "#produse">Accesorii transport </a>
+                              <a onclick="getEvomagSubcategory('Biberoane si tetine ')" href = "#produse">Biberoane si tetine </a>
+                              <a onclick="getEvomagSubcategory('Suzete ')" href = "#produse">Suzete </a>
+                              <a onclick="getEvomagSubcategory('Incalzitoare biberoane si hrana ')" href = "#produse">Incalzitoare biberoane si hrana </a>
+                              <a onclick="getEvomagSubcategory('Babyphone ')" href = "#produse">Babyphone </a>
+                              <a onclick="getEvomagSubcategory('Monitoare video bebelusi ')" href = "#produse">Monitoare video bebelusi </a>
+                              <a onclick="getEvomagSubcategory('Lampi de veghe ')" href = "#produse">Lampi de veghe </a>
+                              <a onclick="getEvomagSubcategory('Cadite bebelusi ')" href = "#produse">Cadite bebelusi </a>
+                              <a onclick="getEvomagSubcategory('Olite ')" href = "#produse">Olite </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a onclick="getEvomagCategory('Casa, Decoratiuni %26amp; Bricolaj')" class = "dropbtnSecond" href="#produse"> Casa, Decoratiuni &amp; Bricolaj </a>
+                                        <div class = "dropdown-content-second">
+                              <a onclick="getEvomagSubcategory('Masini de tuns iarba ')" href = "#produse">Masini de tuns iarba </a>
+                              <a onclick="getEvomagSubcategory('Motosape ')" href = "#produse">Motosape </a>
+                              <a onclick="getEvomagSubcategory('Motocultoare ')" href = "#produse">Motocultoare </a>
+                              <a onclick="getEvomagSubcategory('Becuri cu LED ')" href = "#produse">Becuri cu LED </a>
+                              <a onclick="getEvomagSubcategory('Iluminare exterioara ')" href = "#produse">Iluminare exterioara </a>
+                              <a onclick="getEvomagSubcategory('Corpuri de iluminat de interior ')" href = "#produse">Corpuri de iluminat de interior </a>
+                              <a onclick="getEvomagSubcategory('Aparate de sudura si invertoare profesionale ')" href = "#produse">Aparate de sudura si invertoare profesionale </a>
+                              <a onclick="getEvomagSubcategory('Accesorii aparate de sudura ')" href = "#produse">Accesorii aparate de sudura </a>
+                              <a onclick="getEvomagSubcategory('Gratare gradina ')" href = "#produse">Gratare gradina </a>
+                              <a onclick="getEvomagSubcategory('Unelte de taiat ')" href = "#produse">Unelte de taiat </a>
+                              <a onclick="getEvomagSubcategory('Unelte pentru constructii ')" href = "#produse">Unelte pentru constructii </a>
+                              <a onclick="getEvomagSubcategory('Unelte de dulgherit ')" href = "#produse">Unelte de dulgherit </a>
+=======
+                                        <a class = "dropbtnSecond" href="#categoria1_evomag">Laptopuri si Tablete</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_1_evomag"> Laptopuri / Notebook </a>
+                              <a href = "#subcategoria2_1_evomag">Tablete </a>
+                              <a href = "#subcategoria3_1_evomag">Huse Tablete </a>
+                              <a href = "#subcategoria4_1_evomag">Folii Protectie Tablete </a>
+                              <a href = "#subcategoria5_1_evomag">Stylus Pen </a>
+                              <a href = "#subcategoria6_1_evomag">eBook Readere </a>
+                              <a href = "#subcategoria7_1_evomag">Alte accesorii laptop-uri </a>
+                              <a href = "#subcategoria8_1_evomag">Accesorii mac </a>
+                              <a href = "#subcategoria9_1_evomag">Extindere garantie </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria2_evomag">Telefoane mobile si Accesorii</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_2_evomag">Telefoane mobile </a>
+                              <a href = "#subcategoria2_2_evomag">Casti bluetooth, airpods si audio </a>
+                              <a href = "#subcategoria3_2_evomag">Boxe Portabile cu Bluetooth </a>
+                              <a href = "#subcategoria4_2_evomag">Incarcatoare </a>
+                              <a href = "#subcategoria5_2_evomag">Smartwatch </a>
+                              <a href = "#subcategoria6_2_evomag">Telefoane Seniori </a>
+                              <a href = "#subcategoria7_2_evomag">Telefoane Fixe </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria3_evomag">TV & Multimedia</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_3_evomag">LED TV </a>
+                              <a href = "#subcategoria2_3_evomag">Sistem Home Cinema </a>
+                              <a href = "#subcategoria3_3_evomag">Soundbar </a>
+                              <a href = "#subcategoria4_3_evomag">Sisteme Audio </a>
+                              <a href = "#subcategoria5_3_evomag">Player Multimedia </a>
+                              <a href = "#subcategoria6_3_evomag">Centrale Home Center </a>
+                              <a href = "#subcategoria7_3_evomag">Prize inteligente </a>
+                              <a href = "#subcategoria8_3_evomag">Senzori si Detectoare </a>
+                              <a href = "#subcategoria9_3_evomag">Accesorii tablete grafice </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria4_evomag">Componente PC &amp; Gaming</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_4_evomag">Placi Video </a>
+                              <a href = "#subcategoria2_4_evomag">Solid-State Drive </a>
+                              <a href = "#subcategoria3_4_evomag">Procesoare </a>
+                              <a href = "#subcategoria4_4_evomag">Placi de baza </a>
+                              <a href = "#subcategoria5_4_evomag">Jocuri Video - PC si Consola </a>
+                              <a href = "#subcategoria6_4_evomag">Console </a>
+                              <a href = "#subcategoria7_4_evomag">Accesorii console </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria5_evomag">Calculatoare - Sisteme PC</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_5_evomag">All In One PC </a>
+                              <a href = "#subcategoria2_5_evomag">Calculatoare desktop </a>
+                              <a href = "#subcategoria3_5_evomag">Calculatoare Refurbished </a>
+                              <a href = "#subcategoria4_5_evomag">Servere </a>
+                              <a href = "#subcategoria5_5_evomag">Procesoare Server </a>
+                              <a href = "#subcategoria6_5_evomag">Placi de baza Server </a>
+                              <a href = "#subcategoria7_5_evomag">Memorii Server </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria6_evomag">Monitoare</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_6_evomag">Monitoare LED </a>
+                              <a href = "#subcategoria2_6_evomag">Accesorii Monitoare </a>
+                              <a href = "#subcategoria3_6_evomag">Monitoare Refurbished </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria7_evomag">Electrocasnice</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_7_evomag">Aparate frigorifice </a>
+                              <a href = "#subcategoria2_7_evomag">Frigidere </a>
+                              <a href = "#subcategoria3_7_evomag">Combine frigorifice </a>
+                              <a href = "#subcategoria4_7_evomag">Congelatoare </a>
+                              <a href = "#subcategoria5_7_evomag">Cuptoare incorporabile </a>
+                              <a href = "#subcategoria6_7_evomag">Aragazuri </a>
+                              <a href = "#subcategoria7_7_evomag">Aspiratoare cu sac </a>
+                              <a href = "#subcategoria8_7_evomag">Aspiratoare fara sac </a>
+                              <a href = "#subcategoria9_7_evomag">Aspiratoare robot </a>
+                              <a href = "#subcategoria10_7_evomag">Cafetiere </a>
+                              <a href = "#subcategoria11_7_evomag">Espressoare </a>
+                              <a href = "#subcategoria12_7_evomag">Rasnite </a>
+                              <a href = "#subcategoria13_7_evomag">Masini de facut paine </a>
+                              <a href = "#subcategoria14_7_evomag">Multicooker </a>
+                              <a href = "#subcategoria15_7_evomag">Slow cookere </a>
+                              <a href = "#subcategoria16_7_evomag">Dezumidificatoare </a>
+                              <a href = "#subcategoria17_7_evomag">Umidificatoare </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria8_evomag">Imprimante</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_8_evomag">Multifunctionale </a>
+                              <a href = "#subcategoria2_8_evomag">Consumabile </a>
+                              <a href = "#subcategoria3_8_evomag">Imprimante laser alb-negru </a>
+                              <a href = "#subcategoria4_8_evomag">Imprimante laser color </a>
+                              <a href = "#subcategoria5_8_evomag">Imprimante jet cerneala </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria9_evomag">Foto</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_9_evomag">Carduri memorie </a>
+                              <a href = "#subcategoria2_9_evomag">Aparate Foto Compacte </a>
+                              <a href = "#subcategoria3_9_evomag">Rame Digitale </a>
+                              <a href = "#subcategoria4_9_evomag">Obiective </a>
+                              <a href = "#subcategoria5_9_evomag">Binocluri </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria10_evomag">Video</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_10_evomag">Supraveghere video </a>
+                              <a href = "#subcategoria2_10_evomag">Videoproiectoare </a>
+                              <a href = "#subcategoria3_10_evomag">Camere Video </a>
+                              <a href = "#subcategoria4_10_evomag">Accesorii camere video pentru sporturi extreme </a>
+                              <a href = "#subcategoria5_10_evomag">Acumulatori Video </a>
+                              <a href = "#subcategoria6_10_evomag">Genti Video </a>
+                              <a href = "#subcategoria7_10_evomag">Ecrane de proiectie </a>
+                              <a href = "#subcategoria8_10_evomag">Table interactive </a>
+                              <a href = "#subcategoria9_10_evomag">Alte Accesorii Proiector </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria11_evomag">Software</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_11_evomag">Sisteme operare PC </a>
+                              <a href = "#subcategoria2_11_evomag">Aplicatii </a>
+                              <a href = "#subcategoria3_11_evomag">Antivirusi </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria12_evomag">Retelistica</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_12_evomag">Routere </a>
+                              <a href = "#subcategoria2_12_evomag">Access point </a>
+                              <a href = "#subcategoria3_12_evomag">Extendere Wi-Fi </a>
+                              <a href = "#subcategoria4_12_evomag">Switch-uri </a>
+                              <a href = "#subcategoria5_12_evomag">Network Attached Storage </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria13_evomag">AUTO</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_13_evomag">Camere Video Auto </a>
+                              <a href = "#subcategoria2_13_evomag">Lazi frigorifice </a>
+                              <a href = "#subcategoria3_13_evomag">Frigidere Auto </a>
+                              <a href = "#subcategoria4_13_evomag">Statii auto </a>
+                              <a href = "#subcategoria5_13_evomag">Covorase Auto </a>
+                              <a href = "#subcategoria6_13_evomag">Stergatoare </a>
+                              <a href = "#subcategoria7_13_evomag">Senzori de parcare </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria14_evomag">Ingrijire personala</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_14_evomag">Tensiometre </a>
+                              <a href = "#subcategoria2_14_evomag">Termometre </a>
+                              <a href = "#subcategoria3_14_evomag">Glucometre </a>
+                              <a href = "#subcategoria4_14_evomag">Epilatoare </a>
+                              <a href = "#subcategoria5_14_evomag">Epilatoare IPL </a>
+                              <a href = "#subcategoria6_14_evomag">Aparate de tuns </a>
+                              <a href = "#subcategoria7_14_evomag">Aparate de ras electrice </a>
+                              <a href = "#subcategoria8_14_evomag">Aparate de tuns barba </a>
+                              <a href = "#subcategoria9_14_evomag">Periute de dinti electrice </a>
+                              <a href = "#subcategoria10_14_evomag">Irigatoare bucale si accesorii pentru dusul bucal </a>
+                              <a href = "#subcategoria11_14_evomag">Rezerve periute </a>
+                              <a href = "#subcategoria12_14_evomag">Uscatoare de par </a>
+                              <a href = "#subcategoria13_14_evomag">Placi de indreptat parul </a>
+                              <a href = "#subcategoria14_14_evomag">Ondulatoare </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria15_evomag">Sport &amp; Fitness</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_15_evomag">Biciclete Electrice </a>
+                              <a href = "#subcategoria2_15_evomag">Trotinete Electrice </a>
+                              <a href = "#subcategoria3_15_evomag">Hoverboard </a>
+                              <a href = "#subcategoria4_15_evomag">Bratari Fitness &amp; Ceasuri Sportive </a>
+                              <a href = "#subcategoria5_15_evomag">Accesorii gadgeturi pentru monitorizare activitate </a>
+                              <a href = "#subcategoria6_15_evomag">Cantare de baie </a>
+                              <a href = "#subcategoria7_15_evomag">Biciclete </a>
+                              <a href = "#subcategoria8_15_evomag">Piese Biciclete si Accesorii </a>
+                              <a href = "#subcategoria9_15_evomag">Trotinete si Triciclete </a>
+                              <a href = "#subcategoria10_15_evomag">Biciclete Fitness - Magntice &amp; Eliptice </a>
+                              <a href = "#subcategoria11_15_evomag">Benzi de alergat </a>
+                              <a href = "#subcategoria12_15_evomag">Steppere pentru Fitness </a>
+                              <a href = "#subcategoria13_15_evomag">Aparate Fitness Multifunctionale </a>
+                              <a href = "#subcategoria14_15_evomag">Aparate de vaslit </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria16_evomag">Mama si Copilul</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_16_evomag">Masti de protectie faciala </a>
+                              <a href = "#subcategoria2_16_evomag">Sterilizatoare si accesorii </a>
+                              <a href = "#subcategoria3_16_evomag">Cantare </a>
+                              <a href = "#subcategoria4_16_evomag">Carucioare </a>
+                              <a href = "#subcategoria5_16_evomag">Scaune Auto Copii si Inaltatoare </a>
+                              <a href = "#subcategoria6_16_evomag">Accesorii transport </a>
+                              <a href = "#subcategoria7_16_evomag">Biberoane si tetine </a>
+                              <a href = "#subcategoria8_16_evomag">Suzete </a>
+                              <a href = "#subcategoria9_16_evomag">Incalzitoare biberoane si hrana </a>
+                              <a href = "#subcategoria10_16_evomag">Babyphone </a>
+                              <a href = "#subcategoria11_16_evomag">Monitoare video bebelusi </a>
+                              <a href = "#subcategoria12_16_evomag">Lampi de veghe </a>
+                              <a href = "#subcategoria13_16_evomag">Cadite bebelusi </a>
+                              <a href = "#subcategoria14_16_evomag">Olite </a>
+</div> </div>
+<div class ="dropdownSecond">
+                                        <a class = "dropbtnSecond" href="#categoria17_evomag">Casa, Decoratiuni &amp; Bricolaj</a>
+                                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_17_evomag">Masini de tuns iarba </a>
+                              <a href = "#subcategoria2_17_evomag">Motosape </a>
+                              <a href = "#subcategoria3_17_evomag">Motocultoare </a>
+                              <a href = "#subcategoria4_17_evomag">Becuri cu LED </a>
+                              <a href = "#subcategoria5_17_evomag">Iluminare exterioara </a>
+                              <a href = "#subcategoria6_17_evomag">Corpuri de iluminat de interior </a>
+                              <a href = "#subcategoria7_17_evomag">Aparate de sudura si invertoare profesionale </a>
+                              <a href = "#subcategoria8_17_evomag">Accesorii aparate de sudura </a>
+                              <a href = "#subcategoria9_17_evomag">Gratare gradina </a>
+                              <a href = "#subcategoria10_17_evomag">Unelte de taiat </a>
+                              <a href = "#subcategoria11_17_evomag">Unelte pentru constructii </a>
+                              <a href = "#subcategoria12_17_evomag">Unelte de dulgherit </a>
+>>>>>>> cae0b655107ae813fddc3ad2cf7201a4773e350c
+</div> </div>

@@ -1,0 +1,554 @@
+import json
+import os
+import socket
+import sys
+import re
+import pymongo
+
+MONGODB_URI = "mongodb://heroku_xzc0r78w:iipvtiu45d221kjg9fjjtqi7r9@ds243812.mlab.com:43812/heroku_xzc0r78w?retryWrites=false"
+
+class TCPServer:
+    def __init__(self, host='0.0.0.0', port=int(sys.argv[1])):
+        self.host = host
+        self.port = port
+
+    def response_function(self, conn):
+        data = conn.recv(1024)
+        # aici primesc requestul
+        print "Request: \n", data
+        http_server = HTTPServer()
+        response = http_server.handle_request(data)
+        # aici dau response
+        conn.sendall(response)
+        conn.close()
+
+    def start(self):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        s.bind((self.host, self.port))
+        s.listen(5)
+        print "Listening at", s.getsockname()
+        while True:
+
+            # conn, addr = s.accept()
+            # print "Connected by ", addr
+            # thr = Thread(target=self.response_function, args=(conn,))
+            # thr.start()
+
+            conn, addr = s.accept()
+            print "Connected by ", addr
+            data = conn.recv(1024)
+            # aici primesc requestul
+            print "Request: \n", data
+            http_server = HTTPServer()
+            response = http_server.handle_request(data)
+            # aici dau response
+            conn.sendall(response)
+            conn.close()
+
+
+def search_product(request):
+    if request.method == "GET":
+        client = pymongo.MongoClient(MONGODB_URI)
+        db = client.get_default_database()
+        db_comit_items = db.items_emag
+        string_to_search = ""
+        if "content_search" in request.parsed_uri["params"]:
+            string_to_search = request.parsed_uri["params"]["content_search"]
+        list_words_to_search = string_to_search.split("%20")
+
+        myquery = []
+        for word in list_words_to_search:
+            word = word.replace(",", "")
+            word = word.replace('"', "")
+            print word
+
+        word_count = len(list_words_to_search)
+        if word_count <= 3:
+            word_70_procent = 1
+            word_80_procent = 1
+            word_100_procent = word_count
+        else:
+            word_70_procent = int(word_count * 0.7)
+            word_80_procent = int(word_count * 0.8)
+            word_100_procent = word_count
+
+        list_70_procent = []
+        list_80_procent = []
+        list_100_procent = []
+        for word in list_words_to_search[:word_70_procent]:
+            list_70_procent.append(word)
+        if word_70_procent != word_80_procent:
+            for word in list_words_to_search[word_70_procent:word_80_procent]:
+                list_80_procent.append(word)
+        else:
+            for word in list_words_to_search[word_70_procent:]:
+                list_100_procent.append(word)
+        if word_70_procent != word_80_procent != word_100_procent:
+            for word in list_words_to_search[word_80_procent:word_100_procent]:
+                list_100_procent.append(word)
+        for word in list_70_procent:
+            myquery.append({"nume_produs": {'$in': [re.compile(word, re.IGNORECASE)]}})
+
+        result = db_comit_items.aggregate([{"$match": {"$and": myquery}}])
+        final_result = []
+        current_product_70 = []
+        current_product_80 = []
+        current_product_100 = []
+        for product in result:
+            """for i in range(len(product["pret_produs"])):
+                product["pret_produs"][i][2] = str(product["pret_produs"][i][2])"""
+            current_product_70.append(product)
+
+        for result_current in current_product_70:
+            for word in list_80_procent:
+                if word.upper() in result_current['nume_produs'].upper() and result_current not in current_product_80:
+                    current_product_80.append(result_current)
+                    current_product_70.remove(result_current)
+            for word in list_100_procent:
+                if word.upper() in result_current['nume_produs'].upper() and result_current not in current_product_100:
+                    current_product_100.append(result_current)
+                    if result_current in current_product_70:
+                        current_product_70.remove(result_current)
+                    if result_current in current_product_80:
+                        current_product_80.remove(result_current)
+        for current_result in current_product_100:
+            final_result.append(current_result)
+        for current_result in current_product_80:
+            final_result.append(current_result)
+        for current_result in current_product_70:
+            final_result.append(current_result)
+        status_code = 200
+        print json.dumps(final_result)
+        return json.dumps(final_result), status_code, None
+    else:
+        return "Error 501. Method not implemented", 501, None
+
+
+def get_product_from_category_emag(request):
+    if request.method == "GET":
+        client = pymongo.MongoClient(MONGODB_URI)
+        db = client.get_default_database()
+        db_comit_items_emag = db.items_emag
+        db_comit_principal_category = db.principal_categories
+        category_to_print = ""
+        if "category_name" in request.parsed_uri["params"]:
+            category_to_print = request.parsed_uri["params"]["category_name"]
+        print "here", category_to_print
+        if category_to_print == "undefined":
+            return None, 200, None
+        category_to_print = category_to_print.replace('%20', ' ')
+        category_to_print = category_to_print.replace('%26', '&')
+        category_dict = db_comit_principal_category.find_one({'nume_categorie': re.compile(category_to_print, re.IGNORECASE)})
+        print 'dict', category_dict
+        id_category = category_dict['_id']
+        print id_category
+        list_result = []
+        for result in db_comit_items_emag.find({'_id_principal_category': id_category}):
+            list_result.append(result)
+        return json.dumps(list_result), 200, None
+    else:
+        return "Error 501. Method not implemented", 501, None
+
+
+def get_product_from_category_evomag(request):
+    if request.method == "GET":
+        client = pymongo.MongoClient(MONGODB_URI)
+        db = client.get_default_database()
+        db_comit_items_emag = db.items_evomag
+        db_comit_principal_category = db.principal_categories_evomag
+        category_to_print = ""
+        if "category_name" in request.parsed_uri["params"]:
+            category_to_print = request.parsed_uri["params"]["category_name"]
+        if category_to_print == "undefined":
+            return None, 200, None
+        category_to_print = category_to_print.replace('%20', ' ')
+        category_to_print = category_to_print.replace('%26', '&')
+        category_dict = db_comit_principal_category.find_one({'nume_categorie': re.compile(category_to_print, re.IGNORECASE)})
+        id_category = category_dict['_id']
+        list_result = []
+        for result in db_comit_items_emag.find({'_id_principal_category': id_category}):
+            list_result.append(result)
+        return json.dumps(list_result), 200, None
+    else:
+        return "Error 501. Method not implemented", 501, None
+
+
+
+
+
+def get_product_from_subcategory_evomag(request):
+    if request.method == "GET":
+        client = pymongo.MongoClient(MONGODB_URI)
+        db = client.get_default_database()
+        db_comit_items_emag = db.items_emag
+        db_comit_second_category = db.second_categories_evomag
+        category_to_print = ""
+        if "subcategory_name" in request.parsed_uri["params"]:
+            category_to_print = request.parsed_uri["params"]["subcategory_name"]
+        if category_to_print == "undefined":
+            return None, 200, None
+        category_to_print = category_to_print.replace('%20', ' ')
+        category_to_print = category_to_print.replace('%26', '&')
+        category_dict = db_comit_second_category.find_one({'nume_subcategorie': re.compile(category_to_print, re.IGNORECASE)})
+        id_category = category_dict['_id']
+        list_result = []
+        for result in db_comit_items_emag.find({'_id_second_category': id_category}):
+            list_result.append(result)
+        return json.dumps(list_result), 200, None
+    else:
+        return "Error 501. Method not implemented", 501, None
+
+
+def get_news_emag(request):
+    if request.method == "GET":
+        def generate_item_in_rss_feed(item):
+            old_price = ""
+            new_price = ""
+            ignore = "ignore"
+            preturi = item["pret_produs"]
+            if len(preturi):
+                last = preturi[-1]
+                new_price = last[1]
+                if last[0] is not None:
+                    old_price = last[0]
+                else:
+                    if len(preturi) > 1:
+                        last_last = preturi[-2]
+                        old_price = last_last[1]
+            item_title = item["nume_produs"]
+            if item_title:
+                item_title = item_title.encode("ascii", ignore)
+            item_link = item.get("link_produs", "")
+            if item_link:
+                item_link = item_link.encode("ascii", ignore)
+            imagine_produs = item.get("imagine_produs", "")
+            if imagine_produs:
+                imagine_produs = imagine_produs.encode("ascii", ignore)
+            if old_price:
+                old_price = old_price.encode("ascii", ignore)
+            if new_price:
+                new_price = new_price.encode("ascii", ignore)
+            template_rss = """      <item>
+                <title><![CDATA[{item_title}]]></title>
+                <link>{item_link}</link>
+                <description><![CDATA[<table><tr>
+                  <td><a href="{item_link}"><img src="{prod_img}" alt="" border="0" align="left" height="75" width="75" /></a></td>
+                  <td style="text-decoration:none;"><p>Old Price: <span class="price">{old_price}</span> Special Price: <span class="price">{new_price}</span></p></td></tr></table>]]></description>
+              </item>
+        """.format(item_title=item_title, item_link=item_link, prod_img=imagine_produs, old_price=old_price,
+                   new_price=new_price)
+            return template_rss
+
+        def generate_rss_feed(title, description, link, content):
+            rss_head = """<?xml version="1.0" encoding="UTF-8"?>
+        <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+          <channel>
+            <title><![CDATA[{content_title}]]></title>
+            <link>{content_link}</link>
+            <description><![CDATA[{content_descrition}]]></description>
+            <language>ro_RO</language>
+            <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        """.format(content_title=title, content_descrition=description, content_link=link)
+            rss_foot = """  </channel>
+        </rss>"""
+            rss_content = "".join([generate_item_in_rss_feed(item) for item in content])
+            rss_result = rss_head + rss_content + rss_foot
+            # handler = open("{}_feed.xml".format(title.lower().replace(" ", "")), "w").write(rss_result)
+            return rss_result
+
+        def convert_pret_to_float(pret):
+            try:
+                pret = pret.split()[0]
+                int_part = pret.split(',')[0]
+                if ',' in pret:
+                    float_part = pret.split(',')[1]
+                else:
+                    float_part = 0
+                int_part = int_part.replace('.', '')
+                pret = int(int_part) + float(int(float_part)) / (pow(10, len(float_part)))
+                return pret
+            except:
+                return 0
+
+        def check_kind_of_promotion(item):
+            list_prices = json.loads(item['pret_produs'])
+            if len(list_prices):
+                last_price = list_prices[len(list_prices) - 1]
+                if last_price[0] is None:
+                    current_price = convert_pret_to_float(last_price[1])
+                    if len(list_prices) >= 2:
+                        last_last_price = list_prices[len(list_prices) - 2]
+                        old_price = convert_pret_to_float(last_last_price[1])
+                        if old_price is not None:
+                            if old_price > current_price:
+                                return item
+                else:
+                    if last_price[1] is None:
+                        return None
+                    else:
+                        current_price = convert_pret_to_float(last_price[1])
+                        old_price = convert_pret_to_float(last_price[0])
+                        if old_price > current_price:
+                            return item
+            return None
+
+        def get_promotion_list_items():
+            client = pymongo.MongoClient(MONGODB_URI)
+            db = client.get_default_database()
+            db_comit_items = db.items_emag
+            list_for_rss = []
+            for i in range(11):
+                count_list = 0
+                for item in db_comit_items.find({'_id_principal_category': "p_{}".format(i)}):
+                    item_to_add = check_kind_of_promotion(item)
+                    if item_to_add is not None:
+                        list_for_rss.append(item)
+                        count_list += 1
+                    if count_list == 5:
+                        break
+            return list_for_rss
+
+        rss_result = generate_rss_feed("Emag promotions", "Promotions for each category", "www.emag.ro", get_promotion_list_items())
+
+        return rss_result, 200, {'Content-Type': 'application/rss+xml'}
+    else:
+        return "Error 501. Method not implemented", 501, None
+
+
+class HTTPServer(TCPServer):
+    headers = {
+        'Server': 'TWServer',
+        'Content-Type': 'text/html',
+        'Access-Control-Allow-Origin': '*'
+    }
+
+    dict_principal_routes = {}
+
+    dict_entire_routes = {
+        "/search_product": search_product,
+        "/news_emag": get_news_emag,
+        "/get_products/emag": get_product_from_category_emag,
+        "/get_products/evomag": get_product_from_category_evomag,
+        "/get_products/subcategory/evomag": get_product_from_subcategory_evomag,
+        "/get_products/subcategory/emag": get_product_from_subcategory_emag
+    }
+
+    dict_mime_types = None
+    dict_status_codes = None
+
+    def __init__(self):
+        TCPServer.__init__(self)
+        handler_mime_types = open("Helpers/mime_types_dict", "r")
+        self.dict_mime_types = json.load(handler_mime_types)
+        handler_mime_types.close()
+        handler_status_code = open("Helpers/status_codes_dict", "r")
+        self.dict_status_codes = json.load(handler_status_code)
+        handler_status_code.close()
+
+    def handle_request(self, data):
+        request = HttpRequest(data)
+        response = None
+        handler = None
+        print(request.parsed_uri)
+
+        entire_uri = request.parsed_uri["entire_route"]
+        if entire_uri in self.dict_entire_routes:
+            handler = self.dict_entire_routes[entire_uri]
+        else:
+            for partial_url in self.dict_principal_routes:
+                if partial_url in entire_uri:
+                    handler = self.dict_principal_routes[partial_url]
+                    break
+            if not handler:
+                response = self.HTTP_501_handler(request)
+        if request.method is None:
+            response = self.HTTP_501_handler(request)
+        elif response is None and handler is not None:
+            text, status, extra_headers = handler(request)
+            response_line = self.response_line(status)
+            response_headers = self.response_headers(extra_headers)
+            response_body = text
+
+            blank_line = "\r\n"
+
+            return "%s%s%s%s" % (
+                response_line,
+                response_headers,
+                blank_line,
+                response_body
+            )
+
+        else:
+            response = self.HTTP_501_handler(request)
+        return response
+
+        """
+        try:
+            handler = getattr(self, 'handle_%s' % request.method)
+        except AttributeError:
+            response = self.HTTP_501_handler(request)
+        if request.method is None:
+            response = self.HTTP_501_handler(request)
+        elif response is None and handler is not None:
+            response = handler(request)
+        else:
+            response = self.HTTP_501_handler(request)
+        return response
+        """
+
+    def HTTP_501_handler(self, request):
+        response_line = self.response_line(status_code=501)
+        response_headers = self.response_headers()
+        blank_line = "\r\n"
+        response_body = "<h1>501 Not Implemented</h1"
+        return "%s%s%s%s" % (
+            response_line,
+            response_headers,
+            blank_line,
+            response_body
+        )
+
+    def handle_OPTIONS(self, request):
+        response_line = self.response_line(200)
+        extra_headers = {'Allow': 'OPTIONS, GET'}
+        response_headers = self.response_headers(extra_headers)
+
+        blank_line = "\r\n"
+
+        return "%s%s%s" % (
+            response_line,
+            response_headers,
+            blank_line
+        )
+
+    def handle_GET(self, request):
+        filename = request.uri.strip('/')
+        filename = "Views/" + filename
+        if os.path.exists(filename) and os.path.isfile(filename):
+            response_line = self.response_line(200)
+            if "." in filename:
+                extension = "." + filename.rsplit(".")[1]
+                content_type = str(self.dict_mime_types[extension][1])
+            else:
+                content_type = "text/html"
+            extra_headers = {'Content-Type': content_type}
+            response_headers = self.response_headers(extra_headers)
+
+            with open(filename, "rb") as f:
+                response_body = f.read()
+        else:
+            response_line = self.response_line(404)
+            response_headers = self.response_headers()
+            response_body = "<h1> 404 Not Found </h1>"
+
+        blank_line = "\r\n"
+
+        return "%s%s%s%s" % (
+            response_line,
+            response_headers,
+            blank_line,
+            response_body
+        )
+
+    def handle_POST(self, request):
+        uri = request.uri.strip('/')
+        response_line = self.response_line(200)
+        response_headers = self.response_headers()
+        blank_line = "\r\n"
+        return "%s%s%s" % (
+            response_line,
+            response_headers,
+            blank_line
+        )
+
+    def response_line(self, status_code):
+        """
+        :param status_code:
+        :return: response_line
+        """
+        reason = str(self.dict_status_codes[str(status_code)][0])
+        return "HTTP/1.1 %s %s \r\n" % (status_code, reason)
+
+    def response_headers(self, extra_headers=None):
+        """
+        :param extra_headers: dict for sending extra headers for the current response
+        :return: headers
+        """
+        headers_copy = self.headers.copy()
+        if extra_headers:
+            headers_copy.update(extra_headers)
+        headers = ""
+
+        for h in headers_copy:
+            headers += "%s: %s\r\n" % (h, headers_copy[h])
+        return headers
+
+
+class HttpRequest:
+    def __init__(self, data):
+        self.method = None
+        self.uri = None
+        self.parsed_uri = {"entire_route": "", "principal_route": "", "target": "",
+                      "params": ""}
+        self.http_version = '1.1'
+        self.headers = {}
+        self.body = None
+        self.mime_type = None
+        self.parse(data)
+
+    def parse(self, data):
+        lines = data.split('\r\n')
+        request_line = lines[0]  # first line
+        lines2 = data.split('\r\n\r\n', 1)  # body request
+        request_body = ""
+        if len(lines2) == 2:
+            request_body = lines2[1]
+        if len(request_line):
+            self.parse_request_line(request_line)
+            self.parse_request_uri()
+            self.parse_request_headers(lines[1:])  # headers
+            if len(request_body):
+                self.parse_request_body(request_body)
+
+    def parse_request_uri(self):  # /products/id/test?a=what&b=ce&c="mere%20are%20ana"#test
+        list_component = self.uri.split('/')
+        principal_route = "/".join(list_component[:-1])
+        current_component = list_component[-1]
+        dict_params = {}
+        if "?" in current_component:
+            target = current_component.split("?")[0]
+            params = current_component.split("?")[1]
+            params_final = params.split("&")
+            print params_final
+            for param in params_final:
+                arg = param.split("=")
+                dict_params[arg[0]] = arg[1]
+        else:
+            target = current_component
+        entire_route = principal_route + "/" + target
+        route_dict = {"entire_route": entire_route, "principal_route": principal_route, "target": target,
+                      "params": dict_params}
+        self.parsed_uri = route_dict
+
+    def parse_request_line(self, request_line):
+        words = request_line.split(' ')
+        self.method = words[0]
+        self.uri = words[1]
+
+        if len(words) > 2:
+            self.http_version = words[2]
+
+    def parse_request_body(self, request_body):
+        self.body = request_body
+
+    def parse_request_headers(self, request_headers):
+        for element in request_headers:
+            if 'Content-Type:' in element:
+                mt = element.split(": ")
+                self.mime_type = mt[1].strip()
+
+
+if __name__ == '__main__':
+    server = TCPServer()
+    server.start()

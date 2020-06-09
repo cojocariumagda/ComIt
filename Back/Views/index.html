@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "ro">
+	<head>
+		<title> Compare It </title>
+		<meta charset="utf-8">
+		<meta name = "description" content = "Proiect TW">
+		<meta name = "author" content = "Cernovschi Ioan Valentin si Cojocariu Magda">
+		<meta name = "owner" content = "Cenovschi Ioan Valentin si Cojocariu Magda">
+		<meta name = "keywords" content = "pret, compara, produs, telefon, tableta, pc, laptop, monitor, calculator, carte, Cenovschi Ioan Valentin, Cojocariu Mgada">
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+		<meta name = "distribution" content = "Global">
+		<link rel = "stylesheet" type = "text/css" href = "stil.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class = "header"> 
+			<a href = "#computere"><img class = "logo-replacement" src = "compara.jpg" alt = "balanta"></a>
+			<h1> Compare It </h1>
+		</div>
+
+		<div class = "header">
+			<input id = "searchBar" type = "text" placeholder="Puteti gasi produse la cele mai bune preturi de pe piata..." >
+			<button type = "submit" class = "searchButton"><i class = "fa fa-search"></i></button>
+		</div>
+	
+		<ul>
+ 			<li><a href="#computere">Computere</a></li>
+  			<li><a href="#telefoane">Telefoane</a></li>
+  			<li><a href="#electronice">Electronice</a></li>
+  			<li><a href="#electrocasnice">Electrocasnice</a></li>
+  			<li><a href="#gaming">Gaming</a></li>
+  			<li><a href="#carti">Carti</a></li>
+  			<li><a href="#imbracaminte">Imbracaminte</a></li>
+  			<li><a href="#about">Despre</a></li>
+			<li style = "float:right"><a class="active" href = "#login"> Login </a></li>		
+		</ul>
+
+		<div class = "target">
+
+			<div id = "computere">
+				<p> Bine, tu?</p>
+			</div>
+			<div id = "telefoane">
+				<p> Bine si eu, vreau sa vad daca merge asta </p>
+			</div>
+			<div id = "login">
+				<form action="login.php" method = "post">
+					<img class = "login-replacement" src = "login.png" alt = "login">
+					<div class = "login-container">
+						<label for = "uname"><b>Username</b></label>
+						<input type = "text" placeholder="Introduceti numele de utilizator" name = "uname" required><br>
+
+						<label for = "psw"><b>Password</b></label>
+						<input type = "password" placeholder="Introduce parola" name = "psw" required=""><br>
+
+						<button type = "submit">Login</button><br><br>
+
+						<label>
+							<input type="checkbox" checked = "checked" name="remember"> Remember me
+						</label> 
+					</div>
+					<div class = "login-container">
+						<button type = "button" class = "cancelbtn"> Cancel </button>
+						<span><a href = "#forgotPassword" style = "margin-left: 20px; float:right;"> Forgot password? </a></span>
+					</div>
+				</form>
+			</div>
+			<div id = "about">
+				<h3>ComIt (Compare It!)</h3>
+				<p class = "center"> 
+				Pe baza unui API REST ori GraphQL propriu, realizati o aplicatie Web – disponibila, de asemenea, ca extensie de navigator Web – care furnizeaza utilizatorilor autentificati sau nu studii comparative privitoare la (fluctuatia de) preturi ori alte caracteristici – e.g., model mai recent, varianta similara etc. – asociate unor articole/servicii apartinand unei/unor categorii de interes (electrocasnice, incaltaminte sport, API-uri de recomandare etc.). Datele analizate vor fi preluate din surse multiple (fluxuri de stiri, API-uri disponibile, via scraping - minim 3) oferite de situri de profil ce vor putea fi precizate de utilizator. Recomandarile generate vor fi disponibile si sub forma de fluxuri de stiri RSS si partajate pe minim o retea sociala folosind hashtag-ul #comit. 
+				</p>
+			</div>
+		</div>
+		
+		<div class = "copyright">
+			<span>Copyright © 2020 Cernovschi Ioan - Valentin & Cojocariu Magda<span>
+		</div>
+	</body>
+</html>

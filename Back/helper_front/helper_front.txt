@@ -1,0 +1,94 @@
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria1_emag">Laptop, Tablete & Telefoane</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_1_emag">Tablete si accesorii</a>
+                              <a href = "#subcategoria2_1_emag">Laptopuri si accesorii</a>
+                              <a href = "#subcategoria3_1_emag">Telefoane mobile si accesorii</a>
+                              <a href = "#subcategoria4_1_emag">Wearables & Gadgeturi</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria2_emag">PC, Periferice & Software</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_2_emag">Retelistica & supraveghere</a>
+                              <a href = "#subcategoria2_2_emag">Periferice PC</a>
+                              <a href = "#subcategoria3_2_emag">Componente PC</a>
+                              <a href = "#subcategoria4_2_emag">Servere, Componente & UPS</a>
+                              <a href = "#subcategoria5_2_emag">Imprimante, scanere & consumabile</a>
+                              <a href = "#subcategoria6_2_emag">Desktop PC & Monitoare</a>
+                              <a href = "#subcategoria7_2_emag">Software</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria3_emag">TV, Audio-Video & Foto</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_3_emag">Camere video sport & accesorii</a>
+                              <a href = "#subcategoria2_3_emag">Aparate foto & accesorii</a>
+                              <a href = "#subcategoria3_3_emag">Home Cinema & Audio</a>
+                              <a href = "#subcategoria4_3_emag">Audio HI-FI & Profesionale</a>
+                              <a href = "#subcategoria5_3_emag">Televizoare & accesorii</a>
+                              <a href = "#subcategoria6_3_emag">Drone si accesorii</a>
+                              <a href = "#subcategoria7_3_emag">Videoproiectoare & accesorii</a>
+                              <a href = "#subcategoria8_3_emag">Portabile audio</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria4_emag">Electrocasnice & Climatizare</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_4_emag">Aparate de aer conditionat</a>
+                              <a href = "#subcategoria2_4_emag">Aspiratoare & fiare de calcat</a>
+                              <a href = "#subcategoria3_4_emag">Aragazuri, hote si cuptoare</a>
+                              <a href = "#subcategoria4_4_emag">Electrocasnice bucatarie</a>
+                              <a href = "#subcategoria5_4_emag">Incorporabile</a>
+                              <a href = "#subcategoria6_4_emag">Masini de spalat vase</a>
+                              <a href = "#subcategoria7_4_emag">Masini de spalat rufe</a>
+                              <a href = "#subcategoria8_4_emag">Climatizare</a>
+                              <a href = "#subcategoria9_4_emag">Aparate frigorifice</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria5_emag">Bacanie</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_5_emag">Produse dezinfectante</a>
+                              <a href = "#subcategoria2_5_emag">Bauturi alcoolice</a>
+                              <a href = "#subcategoria3_5_emag">Cosmetice</a>
+                              <a href = "#subcategoria4_5_emag">Bacanie</a>
+                              <a href = "#subcategoria5_5_emag">Spalare & intretinere rufe</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria6_emag">Fashion</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_6_emag">Genti si accesorii barbati</a>
+                              <a href = "#subcategoria2_6_emag">Genti si accesorii femei</a>
+                              <a href = "#subcategoria3_6_emag">Imbracaminte barbati</a>
+                              <a href = "#subcategoria4_6_emag">Incaltaminte femei</a>
+                              <a href = "#subcategoria5_6_emag">Incaltaminte barbati</a>
+                              <a href = "#subcategoria6_6_emag">Imbracaminte femei</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria7_emag">Ingrijire personala & Cosmetice</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_7_emag">Cosmetice & Ingrijire personala</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria8_emag">Casa, Gradina & Bricolaj</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_8_emag">Textile & covoare</a>
+                              <a href = "#subcategoria2_8_emag">Mobilier de gradina</a>
+                              <a href = "#subcategoria3_8_emag">Gradinarit</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria9_emag">Sport & Activitati in aer liber</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_9_emag">Incaltaminte sport</a>
+                              <a href = "#subcategoria2_9_emag">Imbracaminte sport</a>
+                              <a href = "#subcategoria3_9_emag">Fitness si nutritie</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria10_emag">Auto, Moto  & RCA</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_10_emag">Anvelope & Jante</a>
+                              <a href = "#subcategoria2_10_emag">Eletronice Auto</a>
+                              <a href = "#subcategoria3_10_emag">Accesorii auto</a>
+</div> </div>
+<div class ="dropdownSecond">
+                        <a class = "dropbtnSecond" href="#categoria11_emag">Jucarii, Copii & Bebe</a>
+                        <div class = "dropdown-content-second">
+                              <a href = "#subcategoria1_11_emag">Bebelusi</a>
+</div> </div>

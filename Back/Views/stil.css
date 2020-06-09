@@ -1,0 +1,159 @@
+/* Container-ul pentru header, menu etc */
+
+.login-container {
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	text-align: center;
+	align-content: center;
+}
+
+input[type=text], input[type=password] {
+	margin: 1vw;
+	padding: 0.5vw;
+	width: 30vw;
+	border-radius:20px;
+}
+
+input[type=text]:focus {
+	outline:0;
+}
+
+input[type=password]:focus {
+	outline: 0;
+}
+
+button {
+	margin-top:1vw;
+	width: 9vw;
+	height: 4vw;
+	font-size:2vw;
+	border-radius: 20px;
+	border: 1px solid purple;
+}
+
+button:hover {
+	background-color: purple;
+	border:5px solid white;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.cancelbtn {
+	display: block;
+	width: 7vw;
+	height: 4vw;
+	font-size:1.5vw;
+	border-radius: 20px;
+	border: 1px solid purple;
+}
+
+/* proprietati speciale pentru imagini */
+.logo-replacement {
+	float: left;
+	display: block;
+  	width: 4vw;
+  	height: 4vw;
+  	margin-right: 1vw;
+  	margin-bottom: 0;
+
+}
+
+.login-replacement {
+	margin-left: auto;
+	margin-right: auto;
+	float:center;
+	display: block;
+	width: 40vw;
+	height: 10vw;
+}
+
+.target {
+	background-color: purple;
+	border-radius: 20px;
+	padding: 0.1vw;
+	margin: 0.1vw;
+	color: white;
+	font-size: 1.2vw;
+}
+
+.center {
+	text-align: center;
+}
+
+.target > div {
+	display: none;
+}
+
+.target > div:target {
+	display: block;
+}
+
+.copyright {
+	padding: 1vw;
+	color:white;
+	background-color: purple;
+	border-radius: 20px;
+	text-align: center;
+	bottom: 0;
+}
+
+#computere, #telefoane, #electronice, #electrocasnice, #gaming, #carti, #imbracaminte, #about, #login {
+	margin: 1vw;
+	padding: 1vw;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: purple;
+  border-radius: 20px;
+  font-size: 1.5vw;
+  border: 1px solid purple;
+  border-top-width: 0.5px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: white;
+  color:purple;
+}
+
+#searchBar {
+	width: 70vw;
+	height: 2vw;
+	font-size: 1.5vw;	
+}
+
+.header {
+  	background-color: purple;
+ 	border-radius: 20px;
+	color: white;
+	margin: 0;
+	margin-bottom: 0.5vw;
+	padding: 0.5vw;
+}
+
+.searchButton {
+	width: 5vw;
+	height: 3vw;
+	font-size:1.5vw;
+	border-radius: 20px;
+	border: 1px solid purple;	
+	margin: 0;
+}
+
