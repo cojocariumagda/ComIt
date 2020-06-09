@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "ro">
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/stilPopup.css?d=<?php echo time(); ?>"/>
+</head>
+<body>
+<ul class="border">
+    <li><a href="#pret">Pret</a></li>
+    <li><a href="#oferte">Oferte</a></li>
+    <li><a href="#similare">Similare</a></li>
+</ul>
+
+<script src = "JS/popup.js"></script>
+<script src = "node_modules/chart.js/dist/Chart.min.js"></script>
+<div class = "target">
+    <div id = "pret">
+        <canvas id="pretCanvas">
+             <script src = "JS/pret.js"></script>
+        </canvas>
+    </div>
+
+    <div id="oferte">
+        <span> Ne pare rau, avem produsul :( </span>
+    </div>
+
+    <div id="similare">
+        <script src = "JS/similare.js"></script>
+    </div>
+</div>
+
+<div class="footer">
+    <span>Copyright &copy 2020 Cernovschi Ioan - Valentin & Cojocariu Magda</span>
+</div>
+</body>
+</html>
