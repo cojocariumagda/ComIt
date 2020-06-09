@@ -1,0 +1,251 @@
+[{
+  "_id": "s_0",
+  "_id_principal_category": "p_0",
+  "resursa_subcategorie": "/imbracaminte-incaltaminte-sport/sd?ref=hp_menu_quick-nav_651_27&type=subdepartment",
+  "nume_subcategorie": "Incaltaminte sport"
+},{
+  "_id": "s_1",
+  "_id_principal_category": "p_0",
+  "resursa_subcategorie": "/imbracaminte-sport/sd?ref=hp_menu_quick-nav_651_16&type=subdepartment",
+  "nume_subcategorie": "Imbracaminte sport"
+},{
+  "_id": "s_2",
+  "_id_principal_category": "p_0",
+  "resursa_subcategorie": "/fitness-si-nutritie/sd?ref=hp_menu_quick-nav_651_31&type=subdepartment",
+  "nume_subcategorie": "Fitness si nutritie"
+},{
+  "_id": "s_3",
+  "_id_principal_category": "p_1",
+  "resursa_subcategorie": "/tablete-accesorii/sd?ref=hp_menu_quick-nav_1_31&type=subdepartment",
+  "nume_subcategorie": "Tablete si accesorii"
+},{
+  "_id": "s_4",
+  "_id_principal_category": "p_1",
+  "resursa_subcategorie": "/laptopuri-accesorii/sd?ref=hp_menu_quick-nav_1_0&type=subdepartment",
+  "nume_subcategorie": "Laptopuri si accesorii"
+},{
+  "_id": "s_5",
+  "_id_principal_category": "p_1",
+  "resursa_subcategorie": "/telefoane-mobile-accesorii/sd?ref=hp_menu_quick-nav_1_15&type=subdepartment",
+  "nume_subcategorie": "Telefoane mobile si accesorii"
+},{
+  "_id": "s_6",
+  "_id_principal_category": "p_1",
+  "resursa_subcategorie": "/wearables-gadgeturi/sd?ref=hp_menu_quick-nav_1_38&type=subdepartment",
+  "nume_subcategorie": "Wearables & Gadgeturi"
+},{
+  "_id": "s_7",
+  "_id_principal_category": "p_2",
+  "resursa_subcategorie": "/produse-dezinfectante/sd?ref=hp_menu_quick-nav_1308_127&type=subdepartment",
+  "nume_subcategorie": "Produse dezinfectante"
+},{
+  "_id": "s_8",
+  "_id_principal_category": "p_2",
+  "resursa_subcategorie": "/bauturi-alcoolice/sd?ref=hp_menu_quick-nav_1308_15&type=subdepartment",
+  "nume_subcategorie": "Bauturi alcoolice"
+},{
+  "_id": "s_9",
+  "_id_principal_category": "p_2",
+  "resursa_subcategorie": "/cosmetice/sd?ref=hp_menu_quick-nav_1308_35&type=subdepartment",
+  "nume_subcategorie": "Cosmetice"
+},{
+  "_id": "s_10",
+  "_id_principal_category": "p_2",
+  "resursa_subcategorie": "/bacanie/sd?ref=hp_menu_quick-nav_1308_0&type=subdepartment",
+  "nume_subcategorie": "Bacanie"
+},{
+  "_id": "s_11",
+  "_id_principal_category": "p_2",
+  "resursa_subcategorie": "/spalare-intretinere-rufe/sd?ref=hp_menu_quick-nav_1308_46&type=subdepartment",
+  "nume_subcategorie": "Spalare & intretinere rufe"
+},{
+  "_id": "s_12",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/aparate_aer_conditionat/stoc/c?ref=hp_menu_quick-nav_267_27&type=link",
+  "nume_subcategorie": "Aparate de aer conditionat"
+},{
+  "_id": "s_13",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/aspiratoare-fiare-de-calcat/sd?ref=hp_menu_quick-nav_267_24&type=subdepartment",
+  "nume_subcategorie": "Aspiratoare & fiare de calcat"
+},{
+  "_id": "s_14",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/aragazuri-cuptoare-microunde/sd?ref=hp_menu_quick-nav_267_16&type=subdepartment",
+  "nume_subcategorie": "Aragazuri, hote si cuptoare"
+},{
+  "_id": "s_15",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/electrocasnice-bucatarie/sd?ref=hp_menu_quick-nav_267_19&type=subdepartment",
+  "nume_subcategorie": "Electrocasnice bucatarie"
+},{
+  "_id": "s_16",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/incorporabile/sd?ref=hp_menu_quick-nav_267_10&type=subdepartment",
+  "nume_subcategorie": "Incorporabile"
+},{
+  "_id": "s_17",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/masini-spalat-vase/sd?ref=hp_menu_quick-nav_267_15&type=subdepartment",
+  "nume_subcategorie": "Masini de spalat vase"
+},{
+  "_id": "s_18",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/masini-spalat-rufe/sd?ref=hp_menu_quick-nav_267_5&type=subdepartment",
+  "nume_subcategorie": "Masini de spalat rufe"
+},{
+  "_id": "s_19",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/climatizare-sisteme-incalzire/sd?ref=hp_menu_quick-nav_267_31&type=subdepartment",
+  "nume_subcategorie": "Climatizare"
+},{
+  "_id": "s_20",
+  "_id_principal_category": "p_3",
+  "resursa_subcategorie": "/aparate-frigorifice/sd?ref=hp_menu_quick-nav_267_0&type=subdepartment",
+  "nume_subcategorie": "Aparate frigorifice"
+},{
+  "_id": "s_21",
+  "_id_principal_category": "p_4",
+  "resursa_subcategorie": "/camere-video-si-sport/sd?ref=hp_menu_quick-nav_190_28&type=link",
+  "nume_subcategorie": "Camere video sport & accesorii"
+},{
+  "_id": "s_22",
+  "_id_principal_category": "p_4",
+  "resursa_subcategorie": "/aparate-foto-accesorii/sd?ref=hp_menu_quick-nav_190_29&type=subdepartment",
+  "nume_subcategorie": "Aparate foto & accesorii"
+},{
+  "_id": "s_23",
+  "_id_principal_category": "p_4",
+  "resursa_subcategorie": "/home-cinema-blu-ray/sd?ref=hp_menu_quick-nav_190_18&type=subdepartment",
+  "nume_subcategorie": "Home Cinema & Audio"
+},{
+  "_id": "s_24",
+  "_id_principal_category": "p_4",
+  "resursa_subcategorie": "/audio-hi-fi/sd?ref=hp_menu_quick-nav_190_15&type=subdepartment",
+  "nume_subcategorie": "Audio HI-FI & Profesionale"
+},{
+  "_id": "s_25",
+  "_id_principal_category": "p_4",
+  "resursa_subcategorie": "/televizoare-accesorii/sd?ref=hp_menu_quick-nav_190_0&type=subdepartment",
+  "nume_subcategorie": "Televizoare & accesorii"
+},{
+  "_id": "s_26",
+  "_id_principal_category": "p_4",
+  "resursa_subcategorie": "/drone-accesorii/sd?ref=hp_menu_quick-nav_190_27&type=subdepartment",
+  "nume_subcategorie": "Drone si accesorii"
+},{
+  "_id": "s_27",
+  "_id_principal_category": "p_4",
+  "resursa_subcategorie": "/videoproiectoare-si-ecrane/sd?ref=hp_menu_quick-nav_190_14&type=subdepartment",
+  "nume_subcategorie": "Videoproiectoare & accesorii"
+},{
+  "_id": "s_28",
+  "_id_principal_category": "p_4",
+  "resursa_subcategorie": "/ipod-mp3-mp4-casti-audio/sd?ref=hp_menu_quick-nav_190_22&type=subdepartment",
+  "nume_subcategorie": "Portabile audio"
+},{
+  "_id": "s_29",
+  "_id_principal_category": "p_5",
+  "resursa_subcategorie": "/accesorii-barbati/sd?ref=hp_menu_quick-nav_1696_24&type=subdepartment",
+  "nume_subcategorie": "Genti si accesorii barbati"
+},{
+  "_id": "s_30",
+  "_id_principal_category": "p_5",
+  "resursa_subcategorie": "/genti-accesorii-femei/sd?ref=hp_menu_quick-nav_1696_10&type=subdepartment",
+  "nume_subcategorie": "Genti si accesorii femei"
+},{
+  "_id": "s_31",
+  "_id_principal_category": "p_5",
+  "resursa_subcategorie": "/imbracaminte-barbati/sd?ref=hp_menu_quick-nav_1696_15&type=subdepartment",
+  "nume_subcategorie": "Imbracaminte barbati"
+},{
+  "_id": "s_32",
+  "_id_principal_category": "p_5",
+  "resursa_subcategorie": "/incaltaminte-femei/sd?ref=hp_menu_quick-nav_1696_6&type=subdepartment",
+  "nume_subcategorie": "Incaltaminte femei"
+},{
+  "_id": "s_33",
+  "_id_principal_category": "p_5",
+  "resursa_subcategorie": "incaltaminte-barbati/sd?ref=hp_menu_quick-nav_1696_20&type=subdepartment",
+  "nume_subcategorie": "Incaltaminte barbati"
+},{
+  "_id": "s_34",
+  "_id_principal_category": "p_5",
+  "resursa_subcategorie": "/imbracaminte-femei/sd?ref=hp_menu_quick-nav_1696_1&type=subdepartment",
+  "nume_subcategorie": "Imbracaminte femei"
+},{
+  "_id": "s_35",
+  "_id_principal_category": "p_6",
+  "resursa_subcategorie": "/cosmetice-produse-ingrijire-personala/sd?ref=hp_menu_quick-nav_368_4&type=subdepartment",
+  "nume_subcategorie": "Cosmetice & Ingrijire personala"
+},{
+  "_id": "s_36",
+  "_id_principal_category": "p_7",
+  "resursa_subcategorie": "/toate-produsele-bebelusi/sd?ref=hp_menu_quick-nav_768_0&type=subdepartment",
+  "nume_subcategorie": "Bebelusi"
+},{
+  "_id": "s_37",
+  "_id_principal_category": "p_8",
+  "resursa_subcategorie": "/retelistica-si-supraveghere/sd?ref=hp_menu_quick-nav_23_38&type=subdepartment",
+  "nume_subcategorie": "Retelistica & supraveghere"
+},{
+  "_id": "s_38",
+  "_id_principal_category": "p_8",
+  "resursa_subcategorie": "/periferice-accesorii/sd?ref=hp_menu_quick-nav_23_21&type=subdepartment",
+  "nume_subcategorie": "Periferice PC"
+},{
+  "_id": "s_39",
+  "_id_principal_category": "p_8",
+  "resursa_subcategorie": "/componente/sd?ref=hp_menu_quick-nav_23_6&type=subdepartment",
+  "nume_subcategorie": "Componente PC"
+},{
+  "_id": "s_40",
+  "_id_principal_category": "p_8",
+  "resursa_subcategorie": "/servere-componente-ups/sd?ref=hp_menu_quick-nav_23_36&type=subdepartment",
+  "nume_subcategorie": "Servere, Componente & UPS"
+},{
+  "_id": "s_41",
+  "_id_principal_category": "p_8",
+  "resursa_subcategorie": "/imprimante-scanere-consumabile/sd?ref=hp_menu_quick-nav_23_32&type=subdepartment",
+  "nume_subcategorie": "Imprimante, scanere & consumabile"
+},{
+  "_id": "s_42",
+  "_id_principal_category": "p_8",
+  "resursa_subcategorie": "/desktop-pc-monitoare/sd?ref=hp_menu_quick-nav_23_0&type=subdepartment",
+  "nume_subcategorie": "Desktop PC & Monitoare"
+},{
+  "_id": "s_43",
+  "_id_principal_category": "p_8",
+  "resursa_subcategorie": "/software/sd?ref=hp_menu_quick-nav_23_17&type=subdepartment",
+  "nume_subcategorie": "Software"
+},{
+  "_id": "s_44",
+  "_id_principal_category": "p_9",
+  "resursa_subcategorie": "/textile-casa-covoare/sd?ref=hp_menu_quick-nav_477_35&type=subdepartment",
+  "nume_subcategorie": "Textile & covoare"
+},{
+  "_id": "s_45",
+  "_id_principal_category": "p_9",
+  "resursa_subcategorie": "/mobilier-gradina/sd?ref=hp_menu_quick-nav_477_0&type=subdepartment",
+  "nume_subcategorie": "Mobilier de gradina"
+},{
+  "_id": "s_46",
+  "_id_principal_category": "p_9",
+  "resursa_subcategorie": "/gradinarit/sd?ref=hp_menu_quick-nav_477_6&type=subdepartment",
+  "nume_subcategorie": "Gradinarit"
+},{
+  "_id": "s_47",
+  "_id_principal_category": "p_10",
+  "resursa_subcategorie": "/anvelope-jante/sd?ref=hp_menu_quick-nav_689_0&type=subdepartment",
+  "nume_subcategorie": "Anvelope & Jante"
+},{
+  "_id": "s_48",
+  "_id_principal_category": "p_10",
+  "resursa_subcategorie": "/electronice-auto/sd?ref=hp_menu_quick-nav_689_17&type=subdepartment",
+  "nume_subcategorie": "Eletronice Auto"
+},{
+  "_id": "s_49",
+  "_id_principal_category": "p_10",
+  "resursa_subcategorie": "/accesorii-auto-exterioare-interioare/sd?ref=hp_menu_quick-nav_689_23&type=subdepartment",
+  "nume_subcategorie": "Accesorii auto"
+}]

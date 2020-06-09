@@ -1,0 +1,726 @@
+[{
+  "_id": "evo_s0",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-laptopuri-notebook/",
+  "nume_subcategorie": " Laptopuri / Notebook "
+},{
+  "_id": "evo_s1",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-tablete/",
+  "nume_subcategorie": "Tablete "
+},{
+  "_id": "evo_s2",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-accesorii-tablete-huse-tablete/",
+  "nume_subcategorie": "Huse Tablete "
+},{
+  "_id": "evo_s3",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-accesorii-tablete-folii-protectie-tablete/",
+  "nume_subcategorie": "Folii Protectie Tablete "
+},{
+  "_id": "evo_s4",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-accesorii-tablete-stylus-pen/",
+  "nume_subcategorie": "Stylus Pen "
+},{
+  "_id": "evo_s5",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-ebook-readere/",
+  "nume_subcategorie": "eBook Readere "
+},{
+  "_id": "evo_s6",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-accesorii-laptop-alte-accesorii-laptop-uri/",
+  "nume_subcategorie": "Alte accesorii laptop-uri "
+},{
+  "_id": "evo_s7",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-accesorii-laptop-accesorii-mac/",
+  "nume_subcategorie": "Accesorii mac "
+},{
+  "_id": "evo_s8",
+  "_id_principal_category": "evo_p1",
+  "resursa_subcategorie": "/portabile-accesorii-laptop-extindere-garantie/",
+  "nume_subcategorie": "Extindere garantie "
+},{
+  "_id": "evo_s9",
+  "_id_principal_category": "evo_p2",
+  "resursa_subcategorie": "/solutii-mobile-telefoane-mobile/",
+  "nume_subcategorie": "Telefoane mobile "
+},{
+  "_id": "evo_s10",
+  "_id_principal_category": "evo_p2",
+  "resursa_subcategorie": "/solutii-mobile-accesorii-telefoane-casti-bluetooth-airpods-si-audio/",
+  "nume_subcategorie": "Casti bluetooth, airpods si audio "
+},{
+  "_id": "evo_s11",
+  "_id_principal_category": "evo_p2",
+  "resursa_subcategorie": "/solutii-mobile-accesorii-telefoane-boxe-portabile-cu-bluetooth/",
+  "nume_subcategorie": "Boxe Portabile cu Bluetooth "
+},{
+  "_id": "evo_s12",
+  "_id_principal_category": "evo_p2",
+  "resursa_subcategorie": "/solutii-mobile-accesorii-telefoane-incarcatoare/",
+  "nume_subcategorie": "Incarcatoare "
+},{
+  "_id": "evo_s13",
+  "_id_principal_category": "evo_p2",
+  "resursa_subcategorie": "/solutii-mobile-smartwatch/",
+  "nume_subcategorie": "Smartwatch "
+},{
+  "_id": "evo_s14",
+  "_id_principal_category": "evo_p2",
+  "resursa_subcategorie": "/solutii-mobile-telefoane-seniori/",
+  "nume_subcategorie": "Telefoane Seniori "
+},{
+  "_id": "evo_s15",
+  "_id_principal_category": "evo_p2",
+  "resursa_subcategorie": "/solutii-mobile-telefoane-fixe/",
+  "nume_subcategorie": "Telefoane Fixe "
+},{
+  "_id": "evo_s16",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-led-tv/",
+  "nume_subcategorie": "LED TV "
+},{
+  "_id": "evo_s17",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-home-audio-sistem-home-cinema/",
+  "nume_subcategorie": "Sistem Home Cinema "
+},{
+  "_id": "evo_s18",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-home-audio-soundbar/",
+  "nume_subcategorie": "Soundbar "
+},{
+  "_id": "evo_s19",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-home-audio-sisteme-audio/",
+  "nume_subcategorie": "Sisteme Audio "
+},{
+  "_id": "evo_s20",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-player-multimedia/",
+  "nume_subcategorie": "Player Multimedia "
+},{
+  "_id": "evo_s21",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-casa-inteligenta-centrale-home-center/",
+  "nume_subcategorie": "Centrale Home Center "
+},{
+  "_id": "evo_s22",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-casa-inteligenta-prize-inteligente/",
+  "nume_subcategorie": "Prize inteligente "
+},{
+  "_id": "evo_s23",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-casa-inteligenta-senzori-si-detectoare/",
+  "nume_subcategorie": "Senzori si Detectoare "
+},{
+  "_id": "evo_s24",
+  "_id_principal_category": "evo_p3",
+  "resursa_subcategorie": "/tv-multimedia-tablete-grafice-accesorii-tablete-grafice/",
+  "nume_subcategorie": "Accesorii tablete grafice "
+},{
+  "_id": "evo_s25",
+  "_id_principal_category": "evo_p4",
+  "resursa_subcategorie": "/componente-pc-gaming-placi-video/",
+  "nume_subcategorie": "Placi Video "
+},{
+  "_id": "evo_s26",
+  "_id_principal_category": "evo_p4",
+  "resursa_subcategorie": "/componente-pc-gaming-solid-state-drive-ssd/",
+  "nume_subcategorie": "Solid-State Drive "
+},{
+  "_id": "evo_s27",
+  "_id_principal_category": "evo_p4",
+  "resursa_subcategorie": "/componente-pc-gaming-procesoare/",
+  "nume_subcategorie": "Procesoare "
+},{
+  "_id": "evo_s28",
+  "_id_principal_category": "evo_p4",
+  "resursa_subcategorie": "/componente-pc-gaming-placi-de-baza/",
+  "nume_subcategorie": "Placi de baza "
+},{
+  "_id": "evo_s29",
+  "_id_principal_category": "evo_p4",
+  "resursa_subcategorie": "/componente-pc-gaming-gaming-jocuri-video-pc-si-consola/",
+  "nume_subcategorie": "Jocuri Video - PC si Consola "
+},{
+  "_id": "evo_s30",
+  "_id_principal_category": "evo_p4",
+  "resursa_subcategorie": "/componente-pc-gaming-gaming-console/",
+  "nume_subcategorie": "Console "
+},{
+  "_id": "evo_s31",
+  "_id_principal_category": "evo_p4",
+  "resursa_subcategorie": "/componente-pc-gaming-gaming-accesorii-console/",
+  "nume_subcategorie": "Accesorii console "
+},{
+  "_id": "evo_s32",
+  "_id_principal_category": "evo_p5",
+  "resursa_subcategorie": "/sisteme-pc-all-in-one-pc/",
+  "nume_subcategorie": "All In One PC "
+},{
+  "_id": "evo_s33",
+  "_id_principal_category": "evo_p5",
+  "resursa_subcategorie": "/sisteme-pc-branduri/",
+  "nume_subcategorie": "Calculatoare desktop "
+},{
+  "_id": "evo_s34",
+  "_id_principal_category": "evo_p5",
+  "resursa_subcategorie": "/sisteme-pc-calculatoare-refurbished/",
+  "nume_subcategorie": "Calculatoare Refurbished "
+},{
+  "_id": "evo_s35",
+  "_id_principal_category": "evo_p5",
+  "resursa_subcategorie": "/sisteme-pc-servere/",
+  "nume_subcategorie": "Servere "
+},{
+  "_id": "evo_s36",
+  "_id_principal_category": "evo_p5",
+  "resursa_subcategorie": "/sisteme-pc-accesorii-servere-procesoare-server/",
+  "nume_subcategorie": "Procesoare Server "
+},{
+  "_id": "evo_s37",
+  "_id_principal_category": "evo_p5",
+  "resursa_subcategorie": "/sisteme-pc-accesorii-servere-placi-de-baza-server/",
+  "nume_subcategorie": "Placi de baza Server "
+},{
+  "_id": "evo_s38",
+  "_id_principal_category": "evo_p5",
+  "resursa_subcategorie": "/sisteme-pc-accesorii-servere-memorii-server/",
+  "nume_subcategorie": "Memorii Server "
+},{
+  "_id": "evo_s39",
+  "_id_principal_category": "evo_p6",
+  "resursa_subcategorie": "/monitoare-monitoare-led/",
+  "nume_subcategorie": "Monitoare LED "
+},{
+  "_id": "evo_s40",
+  "_id_principal_category": "evo_p6",
+  "resursa_subcategorie": "/monitoare-accesorii-monitoare/",
+  "nume_subcategorie": "Accesorii Monitoare "
+},{
+  "_id": "evo_s41",
+  "_id_principal_category": "evo_p6",
+  "resursa_subcategorie": "/monitoare-monitoare-refurbished/",
+  "nume_subcategorie": "Monitoare Refurbished "
+},{
+  "_id": "evo_s42",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-electrocasnice-mari-aparate-frigorifice/",
+  "nume_subcategorie": "Aparate frigorifice "
+},{
+  "_id": "evo_s43",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-electrocasnice-mari-aparate-frigorifice-frigidere/",
+  "nume_subcategorie": "Frigidere "
+},{
+  "_id": "evo_s44",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-electrocasnice-mari-aparate-frigorifice-combine-frigorifice/",
+  "nume_subcategorie": "Combine frigorifice "
+},{
+  "_id": "evo_s45",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-electrocasnice-mari-aparate-frigorifice-congelatoare/",
+  "nume_subcategorie": "Congelatoare "
+},{
+  "_id": "evo_s46",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-electrocasnice-mari-cuptoare-incorporabile/",
+  "nume_subcategorie": "Cuptoare incorporabile "
+},{
+  "_id": "evo_s47",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-electrocasnice-mari-aragazuri/",
+  "nume_subcategorie": "Aragazuri "
+},{
+  "_id": "evo_s48",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-aspiratoare-aspiratoare-cu-sac/",
+  "nume_subcategorie": "Aspiratoare cu sac "
+},{
+  "_id": "evo_s49",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-aspiratoare-aspiratoare-fara-sac/",
+  "nume_subcategorie": "Aspiratoare fara sac "
+},{
+  "_id": "evo_s50",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-aspiratoare-aspiratoare-robot/",
+  "nume_subcategorie": "Aspiratoare robot "
+},{
+  "_id": "evo_s51",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-preparare-cafea-cafetiere/",
+  "nume_subcategorie": "Cafetiere "
+},{
+  "_id": "evo_s52",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-preparare-cafea-espressoare/",
+  "nume_subcategorie": "Espressoare "
+},{
+  "_id": "evo_s53",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-preparare-cafea-rasnite/",
+  "nume_subcategorie": "Rasnite "
+},{
+  "_id": "evo_s54",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-gatit-in-casa-masini-de-facut-paine/",
+  "nume_subcategorie": "Masini de facut paine "
+},{
+  "_id": "evo_s55",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-gatit-in-casa-multicooker/",
+  "nume_subcategorie": "Multicooker "
+},{
+  "_id": "evo_s56",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-gatit-in-casa-slow-cookere/",
+  "nume_subcategorie": "Slow cookere "
+},{
+  "_id": "evo_s57",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-masini-de-cusut-masini-de-cusut/",
+  "nume_subcategorie": "Masini de cusut "
+},{
+  "_id": "evo_s58",
+  "_id_principal_category": "evo_p7",
+  "resursa_subcategorie": "/electrocasnice-masini-de-cusut-accesorii-masini-de-cusut/",
+  "nume_subcategorie": "Accesorii masini de cusut "
+},{
+  "_id": "evo_s59",
+  "_id_principal_category": "evo_p8",
+  "resursa_subcategorie": "/imprimante-multifunctionale/",
+  "nume_subcategorie": "Multifunctionale "
+},{
+  "_id": "evo_s60",
+  "_id_principal_category": "evo_p8",
+  "resursa_subcategorie": "/imprimante-consumabile/",
+  "nume_subcategorie": "Consumabile "
+},{
+  "_id": "evo_s61",
+  "_id_principal_category": "evo_p8",
+  "resursa_subcategorie": "/imprimante-imprimante-laser-alb-negru/",
+  "nume_subcategorie": "Imprimante laser alb-negru "
+},{
+  "_id": "evo_s62",
+  "_id_principal_category": "evo_p8",
+  "resursa_subcategorie": "/imprimante-imprimante-laser-color/",
+  "nume_subcategorie": "Imprimante laser color "
+},{
+  "_id": "evo_s63",
+  "_id_principal_category": "evo_p8",
+  "resursa_subcategorie": "/imprimante-imprimante-jet-cerneala/",
+  "nume_subcategorie": "Imprimante jet cerneala "
+},{
+  "_id": "evo_s64",
+  "_id_principal_category": "evo_p9",
+  "resursa_subcategorie": "/foto-carduri-memorie/",
+  "nume_subcategorie": "Carduri memorie "
+},{
+  "_id": "evo_s65",
+  "_id_principal_category": "evo_p9",
+  "resursa_subcategorie": "/foto-rame-digitale/",
+  "nume_subcategorie": "Rame Digitale "
+},{
+  "_id": "evo_s66",
+  "_id_principal_category": "evo_p9",
+  "resursa_subcategorie": "/foto-aparate-foto-compacte/",
+  "nume_subcategorie": "Aparate Foto Compacte "
+},{
+  "_id": "evo_s67",
+  "_id_principal_category": "evo_p9",
+  "resursa_subcategorie": "/foto-obiective/",
+  "nume_subcategorie": "Obiective "
+},{
+  "_id": "evo_s68",
+  "_id_principal_category": "evo_p9",
+  "resursa_subcategorie": "/foto-binocluri/",
+  "nume_subcategorie": "Binocluri "
+},{
+  "_id": "evo_s69",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-supraveghere-video/",
+  "nume_subcategorie": "Supraveghere video "
+},{
+  "_id": "evo_s70",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-videoproiectoare/",
+  "nume_subcategorie": "Videoproiectoare "
+},{
+  "_id": "evo_s71",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-camere-video/",
+  "nume_subcategorie": "Camere Video "
+},{
+  "_id": "evo_s72",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-accesorii-camere-video-accesorii-camere-video-pentru-sporturi-extreme/",
+  "nume_subcategorie": "Accesorii camere video pentru sporturi extreme "
+},{
+  "_id": "evo_s73",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-accesorii-camere-video-acumulatori-video/",
+  "nume_subcategorie": "Acumulatori Video "
+},{
+  "_id": "evo_s74",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-accesorii-camere-video-genti-video/",
+  "nume_subcategorie": "Genti Video "
+},{
+  "_id": "evo_s75",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-accesorii-proiector-ecrane-de-proiectie/",
+  "nume_subcategorie": "Ecrane de proiectie "
+},{
+  "_id": "evo_s76",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-accesorii-proiector-table-interactive/",
+  "nume_subcategorie": "Table interactive "
+},{
+  "_id": "evo_s77",
+  "_id_principal_category": "evo_p10",
+  "resursa_subcategorie": "/video-accesorii-proiector-alte-accesorii-proiector/",
+  "nume_subcategorie": "Alte Accesorii Proiector "
+},{
+  "_id": "evo_s78",
+  "_id_principal_category": "evo_p11",
+  "resursa_subcategorie": "/software-sisteme-operare-pc/",
+  "nume_subcategorie": "Sisteme operare PC "
+},{
+  "_id": "evo_s79",
+  "_id_principal_category": "evo_p11",
+  "resursa_subcategorie": "/software-aplicatii/",
+  "nume_subcategorie": "Aplicatii "
+},{
+  "_id": "evo_s80",
+  "_id_principal_category": "evo_p11",
+  "resursa_subcategorie": "/software-antivirusi/",
+  "nume_subcategorie": "Antivirusi "
+},{
+  "_id": "evo_s81",
+  "_id_principal_category": "evo_p12",
+  "resursa_subcategorie": "/retelistica-routere/",
+  "nume_subcategorie": "Routere "
+},{
+  "_id": "evo_s82",
+  "_id_principal_category": "evo_p12",
+  "resursa_subcategorie": "/retelistica-access-point/",
+  "nume_subcategorie": "Access point "
+},{
+  "_id": "evo_s83",
+  "_id_principal_category": "evo_p12",
+  "resursa_subcategorie": "/retelistica-extendere-wi-fi/",
+  "nume_subcategorie": "Extendere Wi-Fi "
+},{
+  "_id": "evo_s84",
+  "_id_principal_category": "evo_p12",
+  "resursa_subcategorie": "/retelistica-switch-uri/",
+  "nume_subcategorie": "Switch-uri "
+},{
+  "_id": "evo_s85",
+  "_id_principal_category": "evo_p12",
+  "resursa_subcategorie": "/retelistica-network-attached-storage/",
+  "nume_subcategorie": "Network Attached Storage "
+},{
+  "_id": "evo_s86",
+  "_id_principal_category": "evo_p13",
+  "resursa_subcategorie": "/auto-camere-video-auto/",
+  "nume_subcategorie": "Camere Video Auto "
+},{
+  "_id": "evo_s87",
+  "_id_principal_category": "evo_p13",
+  "resursa_subcategorie": "/auto-lazi-frigorifice/",
+  "nume_subcategorie": "Lazi frigorifice "
+},{
+  "_id": "evo_s88",
+  "_id_principal_category": "evo_p13",
+  "resursa_subcategorie": "/auto-frigidere-auto/",
+  "nume_subcategorie": "Frigidere Auto "
+},{
+  "_id": "evo_s89",
+  "_id_principal_category": "evo_p13",
+  "resursa_subcategorie": "/auto-redresoare-si-roboti-de-pornire-auto/",
+  "nume_subcategorie": "Redresoare si Roboti de pornire Auto "
+},{
+  "_id": "evo_s90",
+  "_id_principal_category": "evo_p13",
+  "resursa_subcategorie": "/auto-statii-auto/",
+  "nume_subcategorie": "Statii auto "
+},{
+  "_id": "evo_s91",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-aparate-medicale-tensiometre/",
+  "nume_subcategorie": "Tensiometre "
+},{
+  "_id": "evo_s92",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-aparate-medicale-termometre/",
+  "nume_subcategorie": "Termometre "
+},{
+  "_id": "evo_s93",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-aparate-medicale-glucometre/",
+  "nume_subcategorie": "Glucometre "
+},{
+  "_id": "evo_s94",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-epilare-epilatoare/",
+  "nume_subcategorie": "Epilatoare "
+},{
+  "_id": "evo_s95",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-epilare-epilatoare-ipl/",
+  "nume_subcategorie": "Epilatoare IPL "
+},{
+  "_id": "evo_s96",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-tuns-ras-aparate-de-tuns/",
+  "nume_subcategorie": "Aparate de tuns "
+},{
+  "_id": "evo_s97",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-tuns-ras-aparate-de-ras-electrice/",
+  "nume_subcategorie": "Aparate de ras electrice "
+},{
+  "_id": "evo_s98",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-tuns-ras-aparate-de-tuns-barba/",
+  "nume_subcategorie": "Aparate de tuns barba "
+},{
+  "_id": "evo_s99",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-igiena-dentara-periute-de-dinti-electrice/",
+  "nume_subcategorie": "Periute de dinti electrice "
+},{
+  "_id": "evo_s100",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-igiena-dentara-irigatoare-bucale-si-accesorii-pentru-dusul-bucal/",
+  "nume_subcategorie": "Irigatoare bucale si accesorii pentru dusul bucal "
+},{
+  "_id": "evo_s101",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-igiena-dentara-rezerve-periute/",
+  "nume_subcategorie": "Rezerve periute "
+},{
+  "_id": "evo_s102",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-coafat-uscatoare-de-par/",
+  "nume_subcategorie": "Uscatoare de par "
+},{
+  "_id": "evo_s103",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-coafat-placi-de-indreptat-parul/",
+  "nume_subcategorie": "Placi de indreptat parul "
+},{
+  "_id": "evo_s104",
+  "_id_principal_category": "evo_p14",
+  "resursa_subcategorie": "/ingrijire-personala-coafat-ondulatoare/",
+  "nume_subcategorie": "Ondulatoare "
+},{
+  "_id": "evo_s105",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-vehicule-electrice-biciclete-electrice/",
+  "nume_subcategorie": "Biciclete Electrice "
+},{
+  "_id": "evo_s106",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-vehicule-electrice-trotinete-electrice/",
+  "nume_subcategorie": "Trotinete Electrice "
+},{
+  "_id": "evo_s107",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-vehicule-electrice-hoverboard/",
+  "nume_subcategorie": "Hoverboard "
+},{
+  "_id": "evo_s108",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-intretinere-monitorizare-bratari-fitness-ceasuri-sportive/",
+  "nume_subcategorie": "Bratari Fitness &amp; Ceasuri Sportive "
+},{
+  "_id": "evo_s109",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-intretinere-monitorizare-accesorii-gadgeturi-pentru-monitorizare-activitate/",
+  "nume_subcategorie": "Accesorii gadgeturi pentru monitorizare activitate "
+},{
+  "_id": "evo_s110",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-intretinere-monitorizare-cantare-de-baie/",
+  "nume_subcategorie": "Cantare de baie "
+},{
+  "_id": "evo_s111",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-ciclism-biciclete/",
+  "nume_subcategorie": "Biciclete "
+},{
+  "_id": "evo_s112",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-ciclism-piese-biciclete-si-accesorii/",
+  "nume_subcategorie": "Piese Biciclete si Accesorii "
+},{
+  "_id": "evo_s113",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-ciclism-trotinete-si-triciclete/",
+  "nume_subcategorie": "Trotinete si Triciclete "
+},{
+  "_id": "evo_s114",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-fitness-biciclete-fitness-magntice-eliptice/",
+  "nume_subcategorie": "Biciclete Fitness - Magntice &amp; Eliptice "
+},{
+  "_id": "evo_s115",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-fitness-benzi-de-alergat/",
+  "nume_subcategorie": "Benzi de alergat "
+},{
+  "_id": "evo_s116",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-fitness-steppere-pentru-fitness/",
+  "nume_subcategorie": "Steppere pentru Fitness "
+},{
+  "_id": "evo_s117",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-intretinere-musculara-aparate-fitness-multifunctionale/",
+  "nume_subcategorie": "Aparate Fitness Multifunctionale "
+},{
+  "_id": "evo_s118",
+  "_id_principal_category": "evo_p15",
+  "resursa_subcategorie": "/sport-fitness-intretinere-musculara-aparate-de-vaslit/",
+  "nume_subcategorie": "Aparate de vaslit "
+},{
+  "_id": "evo_s119",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-igiena-si-sanatate-masti-de-protectie-faciala/",
+  "nume_subcategorie": "Masti de protectie faciala "
+},{
+  "_id": "evo_s120",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-igiena-si-sanatate-sterilizatoare-si-accesorii/",
+  "nume_subcategorie": "Sterilizatoare si accesorii "
+},{
+  "_id": "evo_s121",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-igiena-si-sanatate-cantare/",
+  "nume_subcategorie": "Cantare "
+},{
+  "_id": "evo_s122",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-carucioare-transport-bebe-carucioare/",
+  "nume_subcategorie": "Carucioare "
+},{
+  "_id": "evo_s123",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-carucioare-transport-bebe-scaune-auto-copii-si-inaltatoare/",
+  "nume_subcategorie": "Scaune Auto Copii si Inaltatoare "
+},{
+  "_id": "evo_s124",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-carucioare-transport-bebe-accesorii-transport/",
+  "nume_subcategorie": "Accesorii transport "
+},{
+  "_id": "evo_s125",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-alimentatie-biberoane-si-tetine/",
+  "nume_subcategorie": "Biberoane si tetine "
+},{
+  "_id": "evo_s126",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-alimentatie-suzete/",
+  "nume_subcategorie": "Suzete "
+},{
+  "_id": "evo_s127",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-alimentatie-incalzitoare-biberoane-si-hrana/",
+  "nume_subcategorie": "Incalzitoare biberoane si hrana "
+},{
+  "_id": "evo_s128",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-monitorizare-babyphone/",
+  "nume_subcategorie": "Babyphone "
+},{
+  "_id": "evo_s129",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-monitorizare-monitoare-video-bebelusi/",
+  "nume_subcategorie": "Monitoare video bebelusi "
+},{
+  "_id": "evo_s130",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-monitorizare-lampi-de-veghe/",
+  "nume_subcategorie": "Lampi de veghe "
+},{
+  "_id": "evo_s131",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-baie-bebelusi-cadite-bebelusi/",
+  "nume_subcategorie": "Cadite bebelusi "
+},{
+  "_id": "evo_s132",
+  "_id_principal_category": "evo_p16",
+  "resursa_subcategorie": "/mama-si-copilul-baie-bebelusi-olite/",
+  "nume_subcategorie": "Olite "
+},{
+  "_id": "evo_s133",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-gradinarit-masini-de-tuns-iarba/",
+  "nume_subcategorie": "Masini de tuns iarba "
+},{
+  "_id": "evo_s134",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-gradinarit-motosape/",
+  "nume_subcategorie": "Motosape "
+},{
+  "_id": "evo_s135",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-gradinarit-motocultoare/",
+  "nume_subcategorie": "Motocultoare "
+},{
+  "_id": "evo_s136",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-solutii-de-iluminat-becuri-cu-led/",
+  "nume_subcategorie": "Becuri cu LED "
+},{
+  "_id": "evo_s137",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-solutii-de-iluminat-iluminare-exterioara/",
+  "nume_subcategorie": "Iluminare exterioara "
+},{
+  "_id": "evo_s138",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-solutii-de-iluminat-corpuri-de-iluminat-de-interior/",
+  "nume_subcategorie": "Corpuri de iluminat de interior "
+},{
+  "_id": "evo_s139",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-aparate-de-sudura-aparate-de-sudura-si-invertoare-profesionale/",
+  "nume_subcategorie": "Aparate de sudura si invertoare profesionale "
+},{
+  "_id": "evo_s140",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-aparate-de-sudura-accesorii-aparate-de-sudura/",
+  "nume_subcategorie": "Accesorii aparate de sudura "
+},{
+  "_id": "evo_s141",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-gratare-gradina/",
+  "nume_subcategorie": "Gratare gradina "
+},{
+  "_id": "evo_s142",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-unelte-si-scule-unelte-de-taiat/",
+  "nume_subcategorie": "Unelte de taiat "
+},{
+  "_id": "evo_s143",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-unelte-si-scule-unelte-pentru-constructii/",
+  "nume_subcategorie": "Unelte pentru constructii "
+},{
+  "_id": "evo_s144",
+  "_id_principal_category": "evo_p17",
+  "resursa_subcategorie": "/casa-decoratiuni-bricolaj-unelte-si-scule-unelte-de-dulgherit/",
+  "nume_subcategorie": "Unelte de dulgherit "
+}]

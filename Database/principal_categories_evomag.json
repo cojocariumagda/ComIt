@@ -1,0 +1,69 @@
+[{
+  "_id": "evo_p0",
+  "resursa_categorie": "/portabile/",
+  "nume_categorie": "Laptopuri si Tablete"
+},{
+  "_id": "evo_p1",
+  "resursa_categorie": "/solutii-mobile/",
+  "nume_categorie": "Telefoane mobile si Accesorii"
+},{
+  "_id": "evo_p2",
+  "resursa_categorie": "/tv-multimedia/",
+  "nume_categorie": "TV & Multimedia"
+},{
+  "_id": "evo_p3",
+  "resursa_categorie": "/componente-pc-gaming/",
+  "nume_categorie": "Componente PC &amp; Gaming"
+},{
+  "_id": "evo_p4",
+  "resursa_categorie": "/sisteme-pc/",
+  "nume_categorie": "Calculatoare - Sisteme PC"
+},{
+  "_id": "evo_p5",
+  "resursa_categorie": "/monitoare/",
+  "nume_categorie": "Monitoare"
+},{
+  "_id": "evo_p6",
+  "resursa_categorie": "/electrocasnice/",
+  "nume_categorie": "Electrocasnice"
+},{
+  "_id": "evo_p7",
+  "resursa_categorie": "/imprimante/",
+  "nume_categorie": "Imprimante"
+},{
+  "_id": "evo_p8",
+  "resursa_categorie": "/foto/",
+  "nume_categorie": "Foto"
+},{
+  "_id": "evo_p9",
+  "resursa_categorie": "/video/",
+  "nume_categorie": "Video"
+},{
+  "_id": "evo_p10",
+  "resursa_categorie": "/software/",
+  "nume_categorie": "Software"
+},{
+  "_id": "evo_p11",
+  "resursa_categorie": "/retelistica/",
+  "nume_categorie": "Retelistica"
+},{
+  "_id": "evo_p12",
+  "resursa_categorie": "/auto/",
+  "nume_categorie": "AUTO"
+},{
+  "_id": "evo_p13",
+  "resursa_categorie": "/ingrijire-personala/",
+  "nume_categorie": "Ingrijire personala"
+},{
+  "_id": "evo_p14",
+  "resursa_categorie": "/sport-fitness/",
+  "nume_categorie": "Sport &amp; Fitness"
+},{
+  "_id": "evo_p15",
+  "resursa_categorie": "/mama-si-copilul/",
+  "nume_categorie": "Mama si Copilul"
+},{
+  "_id": "evo_p16",
+  "resursa_categorie": "/casa-decoratiuni-bricolaj/",
+  "nume_categorie": "Casa, Decoratiuni &amp; Bricolaj"
+}]
