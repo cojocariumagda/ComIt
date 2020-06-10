@@ -1,2 +1,4 @@
 # ComIt
 Web Project 2020 Cojocariu Magda - Cernovschi Ioan Valentin
+
+Pe baza unui API REST ori GraphQL propriu, realizati o aplicatie Web – disponibila, de asemenea, ca extensie de navigator Web – care furnizeaza utilizatorilor autentificati sau nu studii comparative privitoare la (fluctuatia de) preturi ori alte caracteristici – e.g., model mai recent, varianta similara etc. – asociate unor articole/servicii apartinand unei/unor categorii de interes (electrocasnice, incaltaminte sport, API-uri de recomandare etc.). Datele analizate vor fi preluate din surse multiple (fluxuri de stiri, API-uri disponibile, via scraping - minim 3) oferite de situri de profil ce vor putea fi precizate de utilizator. Recomandarile generate vor fi disponibile si sub forma de fluxuri de stiri RSS si partajate pe minim o retea sociala folosind hashtag-ul #comit.
