@@ -6,6 +6,7 @@ import socket
 import ssl
 import string
 import pymongo
+import atexit
 
 MONGODB_URI = "mongodb://heroku_xzc0r78w:iipvtiu45d221kjg9fjjtqi7r9@ds243812.mlab.com:43812/heroku_xzc0r78w?retryWrites=false"
 
@@ -315,6 +316,11 @@ def insert_items():
         resursa = dict_category_db["resursa_subcategorie"]
         data_items = http_data("www.evomag.ro", resursa)
         time.sleep(15)
+        if os.path.exists("stop_evomag"):
+            print("Stopping evomag in 5 seconds...")
+            time.sleep(5)
+            os.remove("stop_evomag")
+            return
         list_items = get_content_items(data_items)
         for item in list_items:
             dict_item = get_dict_item(item, id_int, dict_category_db["_id"], dict_category_db["_id_principal_category"])
@@ -324,17 +330,20 @@ def insert_items():
                 inserted = db_comit_items.insert_one(dict_item)
 
 
+def cleanup():
+    files_to_delete = ["active_evomag", "stop_evomag", "finished_evomag", "running_evomag", "start_evomag"]
+    for item in files_to_delete:
+        if os.path.exists(item):
+            os.remove(item)
+
+
 if __name__ == '__main__':
+    atexit.register(cleanup)
     handler = open("active_evomag", "w")
     # handler.write("{}".format(int(time.time())))
     handler.close()
     while True:
         try:
-            if os.path.exists("stop_evomag"):
-                print("Killing evomag in 5 seconds...")
-                time.sleep(5)
-                os.remove("stop_evomag")
-                break
             if os.path.exists("start_evomag"):
                 print("Found start_evomag, cooldown for 5 seconds and starting the job...")
 

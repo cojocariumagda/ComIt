@@ -5,6 +5,7 @@ import socket
 import ssl
 import string
 import pymongo
+import atexit
 
 MONGODB_URI = "mongodb://heroku_xzc0r78w:iipvtiu45d221kjg9fjjtqi7r9@ds243812.mlab.com:43812/heroku_xzc0r78w?retryWrites=false"
 
@@ -444,6 +445,11 @@ def insert_items():
         dict_category_db = category
         print "from db", dict_category_db
         time.sleep(5)
+        if os.path.exists("stop_emag"):
+            print("Stopping emag in 5 seconds...")
+            time.sleep(5)
+            os.remove("stop_emag")
+            return
         resursa = dict_category_db['resursa_subcategorie']
         data = http_data("www.emag.ro", resursa)
         str_menu = get_content_menubar(data)
@@ -453,6 +459,11 @@ def insert_items():
             for nume_subcategory in dict_categories[subcategory]:
                 data_item = http_data("www.emag.ro", dict_categories[subcategory][nume_subcategory])
                 time.sleep(30)
+                if os.path.exists("stop_emag"):
+                    print("Stopping emag in 5 seconds...")
+                    time.sleep(5)
+                    os.remove("stop_emag")
+                    return
                 list_items = get_content_items(data_item)
                 for item in list_items:
                     dict_info_item = get_dict_item(item)
@@ -482,17 +493,20 @@ def insert_items():
                         print dict_info_item
 
 
+def cleanup():
+    files_to_delete = ["active_emag", "stop_emag", "finished_emag", "running_emag", "start_emag"]
+    for item in files_to_delete:
+        if os.path.exists(item):
+            os.remove(item)
+
+
 if __name__ == '__main__':
+    atexit.register(cleanup)
     handler = open("active_emag", "w")
     # handler.write("{}".format(int(time.time())))
     handler.close()
     while True:
         try:
-            if os.path.exists("stop_emag"):
-                print("Killing emag in 5 seconds...")
-                time.sleep(5)
-                os.remove("stop_emag")
-                break
             if os.path.exists("start_emag"):
                 print("Found start_emag, cooldown for 5 seconds and starting the job...")
 

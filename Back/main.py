@@ -19,7 +19,19 @@ SCRAPPERS = {
     "emag":"emag_scrapping/emag_scrapping.py",
     "evomag":"evomag_scrapping/evomag_scrapping.py",
 }
-running_scrappers = []
+running_scrappers = {}
+dict_mapping_emag_evomag = {
+    "p_0": ["evo_p14"],
+    "p_1": ["evo_p0", "evo_p1"],
+    "p_3": ["evo_p6"],
+    "p_4": ["evo_p2", "evo_p8", "evo_p9"],
+    "p_6": ["evo_p13"],
+    "p_7": ["evo_p15"],
+    "p_8": ["evo_p3", "evo_p4", "evo_p5", "evo_p7", "evo_p10", "evo_p11"],
+    "p_9": ["evo_p16"],
+    "p_10": ["evo_p12"]
+}
+
 
 class TCPServer:
     def __init__(self, host='0.0.0.0', port=int(sys.argv[1])):
@@ -161,7 +173,8 @@ def http_data_get(url, resursa, requestline, encoding='utf-8'):
 
 def facebook_post(message):
     try:
-        graph = facebook.GraphAPI(access_token="EAAIQW0NryWABAF6hWtOsjiCGHZBhufNKoPi0PZCBjpLbCtyB4LBNXWM3fke0XTZAjCMczEqOFjvJtALVcUQ7Qp7TwoFA5YEHUn9jYzOkMqLz6PMFhNlSm9X58t9DFmKf9CphxLrufQeVTjuE2OM31hzrcdffaZBwvaoySzvoc32E7jFTh0ho4RZCTxhgAQ1kZD", version="3.0")
+        #{"access_token": "EAAIQW0NryWABAKs73jbuYAgfzZCMLuD9MbHmdRNwLfZCKQKNIZCoTfBxxGqryZCCmLM357doZB2GPx00DiOeQ1dOcK2Np1niZA7RV8sSjGMs7lp3dOyQwUSPvylHhjqtv8ZCI8XuK3enWgUjS3oD02FfrdvBgPAv9ElYh4fpsRRRgZDZD","token_type": "bearer", "expires_in": 5102265}
+        graph = facebook.GraphAPI(access_token="EAAIQW0NryWABAKs73jbuYAgfzZCMLuD9MbHmdRNwLfZCKQKNIZCoTfBxxGqryZCCmLM357doZB2GPx00DiOeQ1dOcK2Np1niZA7RV8sSjGMs7lp3dOyQwUSPvylHhjqtv8ZCI8XuK3enWgUjS3oD02FfrdvBgPAv9ElYh4fpsRRRgZDZD", version="3.0")
         graph.put_object(
            parent_object="109369880809577",
            connection_name="feed",
@@ -177,7 +190,10 @@ def post_message(request):
         return "Error 501. Method not implemented", 501, None
 
     _body = request.parsed_uri['params']
+    if "message" not in _body:
+        return "Bad Request. Please subimt message param", 400, None
     _body = _body['message']
+    _body = _body.replace("%22", '"')
     _body = _body.replace("%20", " ")
     _body = _body.replace('%26', "&")
     _body = _body.replace("%2F", "/")
@@ -265,7 +281,8 @@ def search_product_api(request):
                     to_append_items = {}
                     to_append_items["nume_produs"] = item.get("name", "")
                     to_append_items["pret_produs"] = [["{} {}".format(item.get("max_price", ""), item.get("currency", "")), "{} {}".format(item.get("min_price", ""), item.get("currency", "")), datetime.datetime.utcfromtimestamp(int(time.time()))]]
-                    to_append_items["rating_produs"] = item.get("review_rating", "")                
+                    #to_append_items['pret_produs'] = "Max price: {} {} | Min price: {} {}".format(item.get("max_price", ""), item.get("currency", ""), item.get("min_price", ""), item.get("currency", ""))
+                    to_append_items["rating_produs"] = item.get("review_rating", "")
                     to_append_items["link_produs"] = item.get("url", "")
                     to_append_items["imagine_produs"] = item.get("image_url", "")
                     to_append_items["reviews_produs"] = item.get("review_count", "")
@@ -299,6 +316,7 @@ def search_product_api(request):
                         price2 = 0
                     price2 = float(price2)
                     to_append_items["pret_produs"] = [[None, "{} {}".format(max(price1, price2), item.get("currency", "")), datetime.datetime.utcfromtimestamp(int(time.time()))]]
+                    #to_append_items["pret_produs"] = "{} {}".format(max(price1, price2), item.get("currency", ""))
                     to_append_items["rating_produs"] = item.get("shop_review_rating", "")                
                     to_append_items["link_produs"] = item.get("url", "")
                     to_append_items["imagine_produs"] = item.get("shop_url", "")
@@ -339,12 +357,12 @@ def search_product_api(request):
                 db_comit_items_google.update_one({"_id": old_item["_id"]}, {"$set": {"pret_produs": new_list}})
 
     for x in range(len(amazon_items)):
-        for i in range(len(amazon_items[x]["pret_produs"])):
-            amazon_items[x]["pret_produs"][i][2] = str(amazon_items[x]["pret_produs"][i][2])
+        amazon_items[x]["pret_produs"] = "Max price: {} | Min price: {}".format(amazon_items[x]["pret_produs"][-1][0], amazon_items[x]["pret_produs"][-1][1])
 
     for x in range(len(googleshop_items)):
-        for i in range(len(googleshop_items[x]["pret_produs"])):
-            googleshop_items[x]["pret_produs"][i][2] = str(googleshop_items[x]["pret_produs"][i][2])
+        #for i in range(len(googleshop_items[x]["pret_produs"])):
+        #googleshop_items[x]["pret_produs"][i][2] = str(googleshop_items[x]["pret_produs"][i][2])
+        googleshop_items[x]["pret_produs"] = googleshop_items[x]["pret_produs"][-1][1]
 
     result_dict = {
         "amazon":amazon_items,
@@ -535,6 +553,86 @@ def get_product_from_subcategory_evomag(request):
         return "Error 501. Method not implemented", 501, None
 
 
+def get_offers(request):
+    if request.method == "GET":
+        client = pymongo.MongoClient(MONGODB_URI)
+        db = client.get_default_database()
+        db_comit_items_evomag = db.items_evomag
+        db_comit_items_emag = db.items_emag
+        db_comit_items_offer = db.promotions_evomag
+        link = request.parsed_uri['params']
+        link = link['product_link']
+        tag_emag = False
+        tag_evomag = False
+        tag_nothing = False
+
+        if 'emag' in link:
+            tag_emag = True
+        else:
+            if 'evomag' in link:
+                tag_evomag = True
+            else:
+                tag_nothing = True
+
+        if tag_emag == True:
+            items_emag = db_comit_items_emag.find({'link_produs': link})
+            if items_emag.count() == 0:
+                return None, 200, None
+            else:
+                categorie_produs = ""
+                for item in items_emag:
+                    categorie_produs = item['_id_principal_category']
+                    break
+                list_items_to_return = []
+                if categorie_produs in dict_mapping_emag_evomag:
+                    for associative_id in dict_mapping_emag_evomag[categorie_produs]:
+                        print associative_id
+                        item = db_comit_items_offer.find({'_id_principal_category': associative_id})
+                        if len(dict_mapping_emag_evomag[categorie_produs]) >= 2:
+                            if len(list_items_to_return) == 2:
+                                break
+                            else:
+                                for it in item:
+                                    if len(list_items_to_return) == 2:
+                                        break
+                                    else:
+                                        list_items_to_return.append(it)
+                        else:
+                            for it in item:
+                                if len(list_items_to_return) == 2:
+                                    break
+                                else:
+                                    list_items_to_return.append(it)
+                    return json.dumps(list_items_to_return, default=json_util.default), 200, None
+                else:
+                    return None, 200, None
+
+        if tag_evomag == True:
+            items_evomag = db_comit_items_evomag.find({'link_produs': link})
+            if items_evomag.count() == 0:
+                return None, 200, None
+            else:
+                categorie_produs = ""
+                for item in items_evomag:
+                    categorie_produs = item['_id_principal_category']
+                    break
+                list_items_to_return = []
+                item = db_comit_items_offer.find({'_id_principal_category': categorie_produs})
+                for it in item:
+                    if len(list_items_to_return) == 2:
+                        break
+                    else:
+                        list_items_to_return.append(it)
+                return json.dumps(list_items_to_return, default=json_util.default), 200, None
+
+        if tag_nothing == False:
+            return None, 200, None
+
+        return None, 200, None
+    else:
+        return "Error 501. Method not implemented", 501, None
+
+
 def get_similar_from_all(request):
     if request.method == "GET":
         client = pymongo.MongoClient(MONGODB_URI)
@@ -578,8 +676,8 @@ def get_similar_from_all(request):
                     word = word.replace('"', "")
                     word = word.replace("(", "")
                     word = word.replace(")", "")
+                    word = '.*' + word + '.*'
                     myquery.append({"nume_produs": {"$in": [re.compile(word, re.IGNORECASE)]}})
-        print myquery
 
         if tag_evomag == True:
             items_evomag = db_comit_items_evomag.find({'link_produs': link})
@@ -589,7 +687,6 @@ def get_similar_from_all(request):
                 nume_produs = ""
                 for item in items_evomag:
                     nume_produs = item['nume_produs']
-                    print nume_produs
                     break
 
                 list_words_to_search = nume_produs.split(' ')
@@ -603,12 +700,35 @@ def get_similar_from_all(request):
                     word = word.replace('"', "")
                     word = word.replace("(", "")
                     word = word.replace(")", "")
-                    print word
+                    word = '.*' + word + '.*'
                     myquery.append({"nume_produs": {'$in': [re.compile(word, re.IGNORECASE)]}})
 
         if tag_nothing == False:
             current_result = []
-            result = db_comit_items_emag.aggregate([{"$match": {"$and": myquery}}])
+
+            result = db_comit_items_google.find({"$or": myquery})
+            for product in result:
+                new_product = {}
+                new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
+                pret_produs = product['pret_produs']
+                len_list_price = len(pret_produs)
+                last_price = pret_produs[len_list_price-1][1]
+                new_product.update({'pret_produs': last_price})
+                current_result.append(product)
+                break
+
+            result = db_comit_items_amazon.find({"$or": myquery})
+            for product in result:
+                new_product = {}
+                new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
+                pret_produs = product['pret_produs']
+                len_list_price = len(pret_produs)
+                last_price = pret_produs[len_list_price-1][1]
+                new_product.update({'pret_produs': last_price})
+                current_result.append(product)
+                break
+
+            result = db_comit_items_evomag.find({"$or": myquery})
             for product in result:
                 new_product = {}
                 new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
@@ -619,33 +739,8 @@ def get_similar_from_all(request):
                 current_result.append(product)
                 break
 
-            result = db_comit_items_evomag.aggregate([{"$match": {"$and": myquery}}])
+            result = db_comit_items_emag.find({"$or": myquery})
             for product in result:
-                print product
-                new_product = {}
-                new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
-                pret_produs = json.loads(product['pret_produs'])
-                len_list_price = len(pret_produs)
-                last_price = pret_produs[len_list_price-1][1]
-                new_product.update({'pret_produs': last_price})
-                current_result.append(product)
-                break
-
-            result = db_comit_items_amazon.aggregate([{"$match": {"$and": myquery}}])
-            for product in result:
-                print product
-                new_product = {}
-                new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
-                pret_produs = json.loads(product['pret_produs'])
-                len_list_price = len(pret_produs)
-                last_price = pret_produs[len_list_price-1][1]
-                new_product.update({'pret_produs': last_price})
-                current_result.append(product)
-                break
-
-            result = db_comit_items_google.aggregate([{"$match": {"$and": myquery}}])
-            for product in result:
-                print product
                 new_product = {}
                 new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
                 pret_produs = json.loads(product['pret_produs'])
@@ -696,20 +791,28 @@ def get_price_fluctuation(request):
             else:
                 for item in items_emag:
                     new_item = item
-                    list_pret = []
                     pret_produse = json.loads(new_item['pret_produs'])
-                    for i in range(len(pret_produse)):
-                        current_list = []
+                    current_list = []
+                    for i in range(len(pret_produse)-1, -1, -1):
                         for j in range(len(pret_produse[i])-1):
                             if pret_produse[i][j] is not None:
                                 if check_contains_digit(pret_produse[i][j]) and len(pret_produse[i][j]) <= 10:
                                     print convert_pret_to_float(pret_produse[i][j])
                                     current_list.append(convert_pret_to_float(pret_produse[i][j]))
-                            else:
-                                current_list.append(None)
-                        current_list.append(pret_produse[i][2])
-                        list_pret.append(current_list)
-                    new_item['pret_produs'] = list_pret
+                    if len(current_list) == 0:
+                        return None, 200, None
+                    if len(current_list) == 1:
+                        new_item['pret_produs'] = []
+                        for i in range(3):
+                            new_item['pret_produs'].append(current_list[0])
+                    if len(current_list) == 2:
+                        new_item['pret_produs'] = []
+                        new_item['pret_produs'].append(float(current_list[0] + current_list[1])/ 2)
+                        new_item['pret_produs'].append(current_list[0])
+                        new_item['pret_produs'].append(current_list[1])
+                    if len(current_list) == 3:
+                        new_item['pret_produs'] = current_list[-3:]
+                    print new_item['pret_produs']
                     return json.dumps(new_item, default=json_util.default), 200, None
 
         if tag_evomag == True:
@@ -719,20 +822,28 @@ def get_price_fluctuation(request):
             else:
                 for item in items_evomag:
                     new_item = item
-                    list_pret = []
                     pret_produse = json.loads(new_item['pret_produs'])
-                    for i in range(len(pret_produse)):
-                        current_list = []
+                    current_list = []
+                    for i in range(len(pret_produse) - 1, -1, -1):
                         for j in range(len(pret_produse[i]) - 1):
                             if pret_produse[i][j] is not None:
                                 if check_contains_digit(pret_produse[i][j]) and len(pret_produse[i][j]) <= 10:
                                     print convert_pret_to_float(pret_produse[i][j])
                                     current_list.append(convert_pret_to_float(pret_produse[i][j]))
-                            else:
-                                current_list.append(None)
-                        current_list.append(pret_produse[i][2])
-                        list_pret.append(current_list)
-                    new_item['pret_produs'] = list_pret
+                    if len(current_list) == 0:
+                        return None, 200, None
+                    if len(current_list) == 1:
+                        new_item['pret_produs'] = []
+                        for i in range(3):
+                            new_item['pret_produs'].append(current_list[0])
+                    if len(current_list) == 2:
+                        new_item['pret_produs'] = []
+                        new_item['pret_produs'].append(float(current_list[0] + current_list[1])/ 2)
+                        new_item['pret_produs'].append(current_list[0])
+                        new_item['pret_produs'].append(current_list[1])
+                    if len(current_list) == 3:
+                        new_item['pret_produs'] = current_list[-3:]
+                    print new_item['pret_produs']
                     return json.dumps(new_item, default=json_util.default), 200, None
 
         if tag_nothing == True:
@@ -776,11 +887,9 @@ def generate_item_in_rss_feed(item):
     if new_price:
         new_price = new_price.encode("ascii", ignore)
     template_rss = """      <item>
-        <title><![CDATA[{item_title}]]></title>
+        <title><![CDATA[ {item_title} ]]></title>
         <link>{item_link}</link>
-        <description><![CDATA[<table><tr>
-            <td><a href="{item_link}"><img src="{prod_img}" alt="" border="0" align="left" height="75" width="75" /></a></td>
-            <td style="text-decoration:none;"><p>Old Price: <span class="price">{old_price}</span> Special Price: <span class="price">{new_price}</span></p></td></tr></table>]]></description>
+        <description><![CDATA[ <table><tr><td><a href="{item_link}"><img src="{prod_img}" alt="" border="0" align="left" height="75" width="75" /></a></td><td style="text-decoration:none;"><p>Old Price: <span class="price">{old_price}</span> Special Price: <span class="price">{new_price}</span></p></td></tr></table> ]]></description>
         </item>
 """.format(item_title=item_title, item_link=item_link, prod_img=imagine_produs, old_price=old_price,
             new_price=new_price)
@@ -791,9 +900,9 @@ def generate_rss_feed(title, description, link, content):
     rss_head = """<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
     <channel>
-    <title><![CDATA[{content_title}]]></title>
+    <title><![CDATA[ {content_title} ]]></title>
     <link>{content_link}</link>
-    <description><![CDATA[{content_descrition}]]></description>
+    <description><![CDATA[ {content_descrition} ]]></description>
     <language>ro_RO</language>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 """.format(content_title=title, content_descrition=description, content_link=link)
@@ -895,16 +1004,18 @@ def get_news_evomag(request):
         return "Error 501. Method not implemented", 501, None
 
 
-def stop_scrapper(request):
+def activate_scrapper(request):
     if request.method == "GET":
         name = ""
         if "name" in request.parsed_uri["params"]:
             name = request.parsed_uri["params"]["name"].lower()
         if name != "":
             if name in SCRAPPERS:
-                handler = open("stop_{}".format(name), "w")
-                handler.close()
-                return "Stopping request performed cu success! The scrapper can only be restarted by restarting the server", 200, None
+                if name in running_scrappers:
+                    return "The scrapper is already running", 400, None
+                child = subprocess.Popen(["python", "{}".format(SCRAPPERS[name])])
+                running_scrappers[name] = child.pid
+                return "Starting request performed cu success!", 200, None
             else:
                 return "{} is not a valid scrapper".format(name), 400, None
         else:
@@ -920,6 +1031,8 @@ def run_scrapper(request):
             name = request.parsed_uri["params"]["name"].lower()
         if name != "":
             if name in SCRAPPERS:
+                if name not in running_scrappers:
+                    return "Scrapper {} is not active".format(name), 400, None
                 handler = open("start_{}".format(name), "w")
                 handler.close()
                 facebook_post(
@@ -942,10 +1055,26 @@ def status_scrapper(request):
             name = request.parsed_uri["params"]["name"].lower()
         if name != "":
             if name in SCRAPPERS:
+                if name not in running_scrappers:
+                    return_str = "{} is not active".format(name)
+                    return return_str, 200, None
                 if os.path.exists("active_{}".format(name)):
                     return_str += "{} is active... ".format(name)
                 if not os.path.exists("active_{}".format(name)):
                     return_str += "{} is not active... ".format(name)
+                if os.path.exists("start_{}".format(name)):
+                    # handler = open("running_{}".format(name), "r")
+                    # content = handler.read()
+                    # handler.close()
+                    # timestamp = datetime.datetime.utcfromtimestamp(int(content.strip(".")[0])*1000)
+                    return_str += "{} is starting... ".format(name)
+                if os.path.exists("stop_{}".format(name)):
+                    # handler = open("running_{}".format(name), "r")
+                    # content = handler.read()
+                    # handler.close()
+                    # timestamp = datetime.datetime.utcfromtimestamp(int(content.strip(".")[0])*1000)
+                    return_str += "{} is stopping... ".format(name)
+
                 if os.path.exists("running_{}".format(name)):
                     # handler = open("running_{}".format(name), "r")
                     # content = handler.read()
@@ -959,6 +1088,44 @@ def status_scrapper(request):
                     # timestamp = datetime.datetime.utcfromtimestamp(int(content.strip(".")[0])*1000)
                     return_str += "{} was finisihed... "
                 return return_str, 200, None
+            else:
+                return "{} is not a valid scrapper".format(name), 400, None
+        else:
+            return "Name has not been provided", 400, None
+    else:
+        return "Error 501. Method not implemented", 501, None
+
+
+def stop_scrapper(request):
+    if request.method == "GET":
+        name = ""
+        if "name" in request.parsed_uri["params"]:
+            name = request.parsed_uri["params"]["name"].lower()
+        if name != "":
+            if name in SCRAPPERS:
+                handler = open("stop_{}".format(name), "w")
+                handler.close()
+                return "Stopping request performed with success! It might take a while until the real stop. Please check the status", 200, None
+            else:
+                return "{} is not a valid scrapper".format(name), 400, None
+        else:
+            return "Name has not been provided", 400, None
+    else:
+        return "Error 501. Method not implemented", 501, None
+
+
+def deactivate_scrapper(request):
+    if request.method == "GET":
+        name = ""
+        if "name" in request.parsed_uri["params"]:
+            name = request.parsed_uri["params"]["name"].lower()
+        if name != "":
+            if name in SCRAPPERS:
+                if name not in running_scrappers:
+                    return "The scrapper is currently not running", 400, None
+                os.kill(running_scrappers[name], signal.SIGTERM)
+                del running_scrappers[name]
+                return "Kill request performed with success!", 200, None
             else:
                 return "{} is not a valid scrapper".format(name), 400, None
         else:
@@ -986,11 +1153,14 @@ class HTTPServer(TCPServer):
         "/get_products/subcategory/evomag": get_product_from_subcategory_evomag,  # /get_products/subcategory/evomag?subcategory_name=
         "/get_products/subcategory/emag": get_product_from_subcategory_emag,  # /get_products/subcategory/emag?subcategory_name=
         "/get_similar": get_similar_from_all, # /get_similar?product_link=
+        "/scrapper/activate": activate_scrapper,  # /scrapper/activate?name=
+        "/scrapper/run": run_scrapper,  # /scrapper/run?name=
+        "/scrapper/status": status_scrapper,  # /scrapper/status?name=
         "/scrapper/stop": stop_scrapper,  # /scrapper/stop?name=
-        "/scrapper/run": run_scrapper,  # /scrapper/stop?run=
-        "/scrapper/status": status_scrapper,  # /scrapper/stop?status=
+        "/scrapper/deactivate": deactivate_scrapper,
         "/send/message": post_message, # put a message to sent
-        "/get_price_fluctuation": get_price_fluctuation  #/get_price_fluctuation?product_link=
+        "/get_price_fluctuation": get_price_fluctuation,  # /get_price_fluctuation?product_link=
+        "/get_offers": get_offers  # /get_offers?product_link=
     }
 
     dict_mime_types = None
@@ -1224,16 +1394,19 @@ class HttpRequest:
                 mt = element.split(": ")
                 self.mime_type = mt[1].strip()
 
+
 def kill_child():
     for child_pid in running_scrappers:
-        os.kill(child_pid, signal.SIGTERM)
+        os.kill(running_scrappers[child_pid], signal.SIGTERM)
+
 
 def start_scrappers():
     for item in SCRAPPERS:
         print("Starting... {}".format(item))
         child = subprocess.Popen(["python","{}".format(SCRAPPERS[item])])
-        running_scrappers.append(child.pid)
+        running_scrappers[item] = child.pid
     atexit.register(kill_child)
+
 
 if __name__ == '__main__':
     start_scrappers()

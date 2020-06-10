@@ -141,25 +141,29 @@ ce va oferi utilizatorilor abonati cele mai noi oferte oferite de EMAG si EVOMAG
 		<section id="apis">
 			<h2>API-uri oferite</h2>
 			<p>API-uri expuse de catre server:</p>
-			<ul>
-			<li><b>/search_product</b><ul><li>* accesibil via GET cu parametru content_search. va cauta in numele produselor si va returna produsule cu o similaritate de nume >= 70 ce pot fi gasite pe EMAG si EVOMAG #/search_product?content_search=</li></ul></li>
-			<li><b>/search_product_api</b><ul><li>* accesibil via GET cu parametru content_search. va cauta in numele produselor si va returna produsule recomandate de AMAZON si GOOGLE SHOP #/search_product_api?content_search=</li></ul></li>
-			<li><b>/news/emag</b><ul><li>* accesibil via GET, rss feed cu promotiile de la evomag, din fiecare categorie existenta (11 categorii in total) cate 5 produse #/news/emag</li></ul></li>
-			<li><b>/news/evomag</b><ul><li>* accesibil via GET, rss feed cu promotiile de la evomag, din fiecare categorie existenta (17 categorii in total) cate 5 produse, #/news/evomag</li></ul></li>
-			<li><b>/get_products/emag</b><ul><li>* accesibil via GET, returneaza toate produse dintr-o anumita cateogrie de pe emag #/get_products/category/emag?category_name=</li></ul></li>
-			<li><b>/get_products/evomag</b><ul><li>* accesibil via GET, returneaza toate produse dintr-o anumita cateogrie de pe evomag #/get_products/category/evomag?category_name=</li></ul></li>
-			<li><b>/get_products/subcategory/evomag</b><ul><li>* accesibil via GET, returneaza toate produse dintr-o anumita subcategorie de pe evomag #/get_products/subcategory/evomag?subcategory_name=</li></ul></li>
-			<li><b>/get_products/subcategory/emag</b><ul><li>* accesibil via GET, returneaza toate produse dintr-o anumita subcategorie de pe emag #/get_products/subcategory/emag?subcategory_name=</li></ul></li>
-			<li><b>/scrapper/stop</b><ul><li>* disponibil via GET, administratorului, opreste o instanta de scrapper in mod safe (va face exit dupa ce isi va termina treaba). aceasta poate fi repornita doar prin repornirea serverului. #/scrapper/stop?name=</li></ul></li>
-			<li><b>/scrapper/run</b><ul><li>* disponibil via GET, administratorului, porneste scrapper-ul. dupa ce se vor colecta datele acesta trece in modul idle, putand fi pornit din nou #/scrapper/run?name=</li></ul></li>
-			<li><b>/scrapper/status</b><ul><li>* disponibil via GET, administratorului, obtine statusul scraperului (activ, inactiv, instanta pornita) #/scrapper/satus?name=</li></ul></li>
-			<li><b>/send/message</b><ul><li>* disponibil via GET, administratorului, posteaza un mesaj pe pagina de facebook, avand #comit #/send/message?message=</li></ul></li>
-			<li><b>/get_price_fluctuation</b><ul><li>* disponibil via GET, primeste ca si parametru un link si returneaza fluctuatia de pret a acelui produs #/get_price_fluctuation?product_link=</li></ul></li>
+			<ul>		
+			<li><b>/search_product</b><ul><li>* accesibil via GET cu parametru content_search. va cauta in numele produselor si va returna produsule cu o similaritate de nume >= 70 ce pot fi gasite pe EMAG si EVOMAG </li><li>/search_product?content_search=</li></ul></li>
+			<li><b>/search_product_api</b><ul><li>* accesibil via GET cu parametru content_search. va cauta in numele produselor si va returna produsule recomandate de AMAZON si GOOGLE SHOP</li><li>/search_product_api?content_search=</li></ul></li>
+			<li><b>/news/emag</b><ul><li>* accesibil via GET, rss feed cu promotiile de la evomag, din fiecare categorie existenta (11 categorii in total) cate 5 produse </li><li>/news/emag</li></ul></li>
+			<li><b>/news/evomag</b><ul><li>* accesibil via GET, rss feed cu promotiile de la evomag, din fiecare categorie existenta (17 categorii in total) cate 5 produse, </li><li>/news/evomag</li></ul></li>
+			<li><b>/get_products/emag</b><ul><li>* accesibil via GET, returneaza toate produse dintr-o anumita cateogrie de pe emag </li><li>/get_products/category/emag?category_name=</li></ul></li>
+			<li><b>/get_products/evomag</b><ul><li>* accesibil via GET, returneaza toate produse dintr-o anumita cateogrie de pe evomag </li><li>/get_products/category/evomag?category_name=</li></ul></li>
+			<li><b>/get_products/subcategory/evomag</b><ul><li>* accesibil via GET, returneaza toate produse dintr-o anumita subcategorie de pe evomag </li><li>/get_products/subcategory/evomag?subcategory_name=</li></ul></li>
+			<li><b>/get_products/subcategory/emag</b><ul><li>* accesibil via GET, returneaza toate produse dintr-o anumita subcategorie de pe emag </li><li>/get_products/subcategory/emag?subcategory_name=</li></ul></li>
+			<li><b>/get_similar</b><ul><li>* accesibil via GET, in extensie, returneaza produse similare / care pot fi cumparate impreuna cu cel vizualizat </li><li> /get_similar?product_link=</li></ul></li>
+			<li><b>/scrapper/activate</b><ul><li>* disponibil via GET, administratorului, activeaza procesul de crawling ce va fi pus in idle pana la primirea comenzii de run </li><li>/scrapper/activate?name=</li></ul></li>
+			<li><b>/scrapper/deactivate</b><ul><li>* disponibil via GET, administratorului, da kill la procesul ce scrapeaza. acesta va trebui reactivat </li><li>/scrapper/deactivate?name=</li></ul></li>
+			<li><b>/scrapper/stop</b><ul><li>* disponibil via GET, administratorului, opreste o crawlare in desfasurare. si trece crawlerul in modul idle </li><li>/scrapper/stop?name=</li></ul></li>
+			<li><b>/scrapper/run</b><ul><li>* disponibil via GET, administratorului, porneste scrapper-ul. dupa ce se vor colecta datele acesta trece in modul idle, putand fi pornit din nou </li><li>/scrapper/run?name=</li></ul></li>
+			<li><b>/scrapper/status</b><ul><li>* disponibil via GET, administratorului, obtine statusul scraperului (activ, inactiv, instanta pornita) </li><li>/scrapper/satus?name=</li></ul></li>
+			<li><b>/send/message</b><ul><li>* disponibil via GET, administratorului, posteaza un mesaj pe pagina de facebook, avand #comit </li><li>/send/message?message=</li></ul></li>
+			<li><b>/get_price_fluctuation</b><ul><li>* disponibil via GET, primeste ca si parametru un link si returneaza fluctuatia de pret a acelui produs </li><li>/get_price_fluctuation?product_link=</li></ul></li>
+			<li><b>/get_offers</b><ul><li>* disponibil via GET, returneaza produse din aceeasi categorie de produse cu pret redus </li><li>/get_offers?product_link=</li></ul></li>
 		<ul>
 		</section>
 		<section id="extensie">
 			<h2>Extensia:</h2>
-			<p>Comparare intre produse si grafice informative utilizand informatiile primite de la server</p>
+			<p>Contine un grafic cu fluctuatia pretului produsului de pe linkul curent. De asemenea, oferim utilzatorului posibilitatea de a vedea oferte din aceeasi categorie din care este produsul pe care il vizualizeaza, recomandari de produse similare cu cel cautat (de exemplu, pentru o pereche de panataloni, poate fi sugerata o curea).</p>
 		</section
 	</section>
 	<section id="data-flow">
