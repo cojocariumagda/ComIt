@@ -691,10 +691,10 @@ def get_similar_from_all(request):
 
                 list_words_to_search = nume_produs.split(' ')
                 len_list = len(list_words_to_search)
-                if len_list <= 6:
+                if len_list <= 4:
                     len_max = len_list
                 else:
-                    len_max = 6
+                    len_max = 4
                 for word in list_words_to_search[:len_max]:
                     word = word.replace(",", "")
                     word = word.replace('"', "")
@@ -706,7 +706,7 @@ def get_similar_from_all(request):
         if tag_nothing == False:
             current_result = []
 
-            result = db_comit_items_google.find({"$or": myquery})
+            result = db_comit_items_google.aggregate([{"$match": {"$and": myquery}}])
             for product in result:
                 new_product = {}
                 new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
@@ -717,7 +717,7 @@ def get_similar_from_all(request):
                 current_result.append(product)
                 break
 
-            result = db_comit_items_amazon.find({"$or": myquery})
+            result = db_comit_items_amazon.aggregate([{"$match": {"$and": myquery}}])
             for product in result:
                 new_product = {}
                 new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
@@ -728,7 +728,7 @@ def get_similar_from_all(request):
                 current_result.append(product)
                 break
 
-            result = db_comit_items_evomag.find({"$or": myquery})
+            result = db_comit_items_evomag.aggregate([{"$match": {"$and": myquery}}])
             for product in result:
                 new_product = {}
                 new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
@@ -739,7 +739,7 @@ def get_similar_from_all(request):
                 current_result.append(product)
                 break
 
-            result = db_comit_items_emag.find({"$or": myquery})
+            result = db_comit_items_emag.aggregate([{"$match": {"$and": myquery}}])
             for product in result:
                 new_product = {}
                 new_product.update({'nume_produs': product['nume_produs'], 'link_produs': product['link_produs']})
@@ -748,7 +748,8 @@ def get_similar_from_all(request):
                 last_price = pret_produs[len_list_price-1][1]
                 new_product.update({'pret_produs': last_price})
                 current_result.append(product)
-                break
+                if len(current_result) == 3:
+                    break
 
             return json.dumps(current_result, default=json_util.default), 200, None
         else:
@@ -807,7 +808,7 @@ def get_price_fluctuation(request):
                             new_item['pret_produs'].append(current_list[0])
                     if len(current_list) == 2:
                         new_item['pret_produs'] = []
-                        new_item['pret_produs'].append(float(current_list[0] + current_list[1])/ 2)
+                        new_item['pret_produs'].append(current_list[0])
                         new_item['pret_produs'].append(current_list[0])
                         new_item['pret_produs'].append(current_list[1])
                     if len(current_list) == 3:
