@@ -1081,13 +1081,13 @@ def status_scrapper(request):
                     # content = handler.read()
                     # handler.close()
                     # timestamp = datetime.datetime.utcfromtimestamp(int(content.strip(".")[0])*1000)
-                    return_str += "{} is running... "
+                    return_str += "{} is running... ".format(name)
                 if os.path.exists("finished_{}".format(name)):
                     # handler = open("finished_{}".format(name), "r")
                     # content = handler.read()
                     # handler.close()
                     # timestamp = datetime.datetime.utcfromtimestamp(int(content.strip(".")[0])*1000)
-                    return_str += "{} was finisihed... "
+                    return_str += "{} was finisihed... ".format(name)
                 return return_str, 200, None
             else:
                 return "{} is not a valid scrapper".format(name), 400, None
