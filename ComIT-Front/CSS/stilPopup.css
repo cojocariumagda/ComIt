@@ -1,0 +1,89 @@
+body {
+    width: 500px;
+    height: 500px;
+    background-color: #F8F8FF;
+}
+
+.footer {
+    border: 2px solid #00008B;
+    border-radius: 20px;
+    color:#00008B;
+    background-color: #F8F8FF;
+    position: fixed;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    width: auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+ul {
+    border: 2px solid #00008B;
+    border-radius: 20px;
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 0.5vw;
+    margin-top: 0.5vw;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F8F8FF;
+    font-size: 15px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #00008B;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+li a:hover {
+    background-color: #00008B;
+    color:#F8F8FF;
+}
+
+a.active {
+    background-color: #00008B;
+    color: #F8F8FF;
+}
+
+#aHover {
+    background-color: #F8F8FF;
+}
+
+.target {
+    background-color: #F8F8FF;
+    padding: 0.1vw;
+    margin: 0.1vw;
+    color: #00008B;
+    font-size: 15px;
+}
+
+.target > div {
+    display: none;
+}
+
+.target > div:target {
+    display: block;
+}
+
+#pret, #oferte, #similare {
+    margin: 1vw;
+    padding: 1vw;
+}
+
+.produs {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 2px solid #00008B;
+    border-radius: 20px;
+    padding: 1vw;
+    margin: 0.2vw;
+}

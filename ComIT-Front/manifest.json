@@ -1,0 +1,26 @@
+{
+  "name": "ComIT",
+  "version": "1.0",
+  "description": "Gaseste cele mai bune preturi!",
+  "background": {
+    "scripts": ["JS/background.js"],
+    "persistent": false
+  },
+  "permissions": ["declarativeContent", "tabs"],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "Imagini/balanta16.png",
+      "32": "Imagini/balanta32.png",
+      "48": "Imagini/balanta48.png",
+      "128": "Imagini/balanta128.png"
+    }
+  },
+  "icons": {
+    "16": "Imagini/balanta16.png",
+    "32": "Imagini/balanta32.png",
+    "48": "Imagini/balanta48.png",
+    "128": "Imagini/balanta128.png"
+  },
+  "manifest_version": 2
+}
