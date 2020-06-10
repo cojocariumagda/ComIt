@@ -285,6 +285,7 @@ function login($numar) {
                  <img class = "logo" src = "Imagini/emag.png">
                 </button>
                 <div class="dropdown-content">
+                    <a class = "dropbtnSecond" onclick="emagNews()" href = "#xml"><span class = "rss">View RSS Feed</span></a>
                     <div class ="dropdownSecond">
                        <a class = "dropbtnSecond" onclick="getEmagCategory('Laptop, Tablete %26 Telefoane')" href="#produse">Laptop, Tablete & Telefoane</a></button>
                         <div class = "dropdown-content-second">
@@ -387,6 +388,7 @@ function login($numar) {
                     <img class = "logo" src = "Imagini/evomag.png">
                 </button>
                 <div class="dropdown-content">
+                    <a class = "dropbtnSecond" onclick="evomagNews()" href = "#xml"><span class = "rss">View RSS Feed</span></a>
                     <div class ="dropdownSecond">
                         <a onclick="getEvomagCategory('Laptopuri si Tablete')" class = "dropbtnSecond" href="#produse"> Laptopuri si Tablete </a>
                         <div class = "dropdown-content-second">
@@ -623,21 +625,19 @@ function login($numar) {
                         const result =JSON.parse(Http.responseText);
                         var out = "";
                         var i;
-                        for(i = 0; i < result['google'].length; i++) {
-                            out += '<div class = "produs"><a target = "_blank" href="' + result['google'][i].link_produs + '">' +
-                                '<img class = "imagine_produs" src ="' + result['google'][i].imagine_produs + '"' +
-                                ' alt = "imagine produs" > ' + '</a><span class = "nextToImage">' + result['google'][i].nume_produs +
-                                '<br>' + 'Pret: ' + convert(result['google'][i].pret_produs) + '<br>' +
-                                'Rating: ' + result['google'][i].rating_produs + '<br>' + '</span></div><br>';
-                        }
-
                         for(i = 0; i < result['amazon'].length; i++) {
                             out += '<div class = "produs"><a target = "_blank" href="' + result['amazon'][i].link_produs + '">' +
-                                '<img class = "imagine_produs" src ="' + result['amazon'][i].imagine_produs + '"' +
-                                ' alt = "imagine produs" > ' + '</a><span class = "nextToImage">' + result['amazon'][i].nume_produs +
-                                '<br>' + 'Pret: ' + convert(result['amazon'][i].pret_produs) + '<br>' +
-                                'Rating: ' + result['amazon'][i].rating_produs + '<br>' + '</span></div><br>';
+                                '<img class = "imagine_produs_api" src ="' + result['amazon'][i].imagine_produs + '"' +
+                                ' alt = "imagine produs" > ' + '</a><span class = "nextToImageAmazon">' + result['amazon'][i].nume_produs +
+                                '<br>' + result['amazon'][i].pret_produs + '<br>Rating: ' + result['amazon'][i].rating_produs + '<br>' + '</span></div><br>';
                         }
+                        for(i = 0; i < result['google'].length; i++) {
+                            out += '<div class = "produs"><a target = "_blank" href="' + result['google'][i].link_produs + '">' +
+                                '<img class = "imagine_produs_api" src ="Imagini/amazoogle.png"' +
+                                ' alt = "imagine produs_api" > ' + '</a><span class = "nextToImageGoogle">' + result['google'][i].nume_produs +
+                                '<br>' + result['google'][i].pret_produs + '<br>Rating: ' + result['google'][i].rating_produs + '<br>' + '</span></div><br>';
+                        }
+
                         document.getElementById("produse").innerHTML = out;
                         window.location.hash = '#produse';
                     };
@@ -747,7 +747,19 @@ function login($numar) {
                     Http.open("GET", url);
                     Http.send();
                     Http.onreadystatechange= (e) => {
-                        document.getElementById('xml').innerHTML = Http.responseText;
+                        document.getElementById('xml').innerHTML = '<h1 class = "center">Flux de stiri cu produsele la oferta</h1>' +  Http.responseText;
+                        window.location.hash("#xml");
+                    };
+                }
+
+                function evomagNews() {
+                    const Http = new XMLHttpRequest();
+                    const url = "https://comittw.herokuapp.com/news/evomag";
+                    Http.open("GET", url);
+                    Http.send();
+                    Http.onreadystatechange= (e) => {
+                        document.getElementById('xml').innerHTML = '<h1 class = "center">Flux de stiri cu produsele la oferta</h1>' + Http.responseText;
+                        window.location.hash("#xml");
                     };
                 }
 
@@ -824,55 +836,135 @@ function login($numar) {
             </script>
             <script>
                 function run() {
+                    let shown = 0;
                     const Http = new XMLHttpRequest();
-                    const url = "https://comittw.herokuapp.com/scrapper/run?name=emag";
+                    let url = "";
+                    if(document.getElementById('emagRadioButton').checked) {
+                        url = "https://comittw.herokuapp.com/scrapper/run?name=emag";
+                    }
+                    else {
+                        url = "https://comittw.herokuapp.com/scrapper/run?name=evomag";
+                    }
                     Http.open("GET", url);
                     Http.send();
 
                     Http.onreadystatechange= (e) => {
-                        window.alert(Http.responseText);
+                        if(shown === 0 && Http.responseText !== "") {
+                            window.alert(Http.responseText);
+                            shown = 1;
+                        }
                     };
                 }
 
                 function stop() {
                     const Http = new XMLHttpRequest();
-                    const url = "https://comittw.herokuapp.com/scrapper/stop?name=emag";
+                    let url = "";
+                    let shown = 0;
+                    if(document.getElementById('emagRadioButton').checked) {
+                        url = "https://comittw.herokuapp.com/scrapper/stop?name=emag";
+                    }
+                    else {
+                        url = "https://comittw.herokuapp.com/scrapper/stop?name=evomag";
+                    }
                     Http.open("GET", url);
                     Http.send();
 
                     Http.onreadystatechange= (e) => {
-                        window.alert(Http.responseText);
-                    };
+                        if(shown === 0 && Http.responseText !== "") {
+                            window.alert(Http.responseText);
+                            shown = 1;
+                        }                    };
                 }
 
                 function statusButton() {
                     const Http = new XMLHttpRequest();
-                    const url = "https://comittw.herokuapp.com/scrapper/status?name=emag";
-                    Http.open("GET", url);
+                    let url = "";
+                    let shown = 0;
+                    if(document.getElementById('emagRadioButton').checked) {
+                        url = "https://comittw.herokuapp.com/scrapper/status?name=emag";
+                    }
+                    else {
+                        url = "https://comittw.herokuapp.com/scrapper/status?name=evomag";
+                    }                    Http.open("GET", url);
                     Http.send();
 
                     Http.onreadystatechange= (e) => {
-                        window.alert(Http.responseText);
+                        if(shown === 0 && Http.responseText !== "") {
+                            window.alert(Http.responseText);
+                            shown = 1;
+                        }
                     };
                 }
 
-                function send(message) {
+                function send() {
                     const Http = new XMLHttpRequest();
-                    const url = "https://comittw.herokuapp.com/scrapper/send?message=" + "Bine ati venit pe pagina noastra! #comit";
+                    let shown = 0;
+                    const url = "https://comittw.herokuapp.com/send/message?message=" + document.getElementById('message').value +  "#comit";
+                    document.getElementById('message').value = "";
                     Http.open("GET", url);
                     Http.send();
 
                     Http.onreadystatechange= (e) => {
-                        window.alert(Http.responseText);
+                        if(shown === 0 && Http.responseText !== "") {
+                            window.alert(Http.responseText);
+                            shown = 1;
+                        }                    };
+                }
+
+                function activate() {
+                    const Http = new XMLHttpRequest();
+                    let url = "";
+                    let shown = 0;
+                    if(document.getElementById('emagRadioButton').checked) {
+                        url = "https://comittw.herokuapp.com/scrapper/activate?name=emag";
+                    }
+                    else {
+                        url = "https://comittw.herokuapp.com/scrapper/activate?name=evomag";
+                    }                    Http.open("GET", url);
+                    Http.send();
+
+                    Http.onreadystatechange= (e) => {
+                        if(shown === 0 && Http.responseText !== "") {
+                            window.alert(Http.responseText);
+                            shown = 1;
+                        }
                     };
                 }
+
+                function deactivate() {
+                    const Http = new XMLHttpRequest();
+                    let url = "";
+                    let shown = 0;
+                    if(document.getElementById('emagRadioButton').checked) {
+                        url = "https://comittw.herokuapp.com/scrapper/deactivate?name=emag";
+                    }
+                    else {
+                        url = "https://comittw.herokuapp.com/scrapper/deactivate?name=evomag";
+                    }                    Http.open("GET", url);
+                    Http.send();
+
+                    Http.onreadystatechange= (e) => {
+                        if(shown === 0 && Http.responseText !== "") {
+                            window.alert(Http.responseText);
+                            shown = 1;
+                        }
+                    };
+                }
+
             </script>
             <div id = "admin">
                 <div class = "center">
-                    <button onclick="run()">Run</button>
-                    <button onclick="stop()">Stop</button>
-                    <button onclick="statusButton()">Status</button>
-                    <button onclick="send()">Send</button>
+                    <form>
+                        <input type = "radio" id ="emagRadioButton" name = "scrapper" value ="emag" checked = "checked"><label for = "emagRadioButotn">Emag</label>
+                        <input type = "radio" id = "evomagRadioButton" name = "scrapper" value = "evomag"><label for = "evomagRadioButton">Evomag</label>
+                    </form>
+                    <input type = "text" id = "message" name ="message" placeholder="Mesaj pentru facebook"><br>
+                    <button onclick="activate()" class= "adminButtons">Activate</button>
+                    <button onclick="deactivate()" class= "adminButtons">Deactivate</button>
+                    <button onclick="run()" class= "adminButtons">Run</button>
+                    <button onclick="stop()" class= "adminButtons">Stop</button>
+                    <button onclick="statusButton()" class= "adminButtons">Status</button>
+                    <button onclick="send()" class= "adminButtons">Send</button>
                 </div>
             </div>
 
@@ -883,6 +975,7 @@ function login($numar) {
             <div id = "produse">
 
             </div>
+
 
             <div id = "xml">
 

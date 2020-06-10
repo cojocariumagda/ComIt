@@ -196,8 +196,18 @@ li a:hover {
 	right: 1vw;
 }
 
-.nextToImage {
+.imagine_produs_api {
+	height: 11vw;
+	width: 7vw;
+}
+
+.nextToImageAmazon {
 	left: 20vw;
+	position: absolute;
+}
+
+.nextToImageGoogle {
+	left: 50vw;
 	position: absolute;
 }
 
@@ -299,6 +309,10 @@ li a:hover {
 	color: #F8F8FF;
 }
 
+.rss {
+	font-size: 1em;
+	color: red;
+}
 .dropdownSecond .dropbtnSecond {
 	outline: 0;
 	border: 0;
@@ -339,4 +353,8 @@ li a:hover {
 
 .dropdownSecond:hover .dropdown-content-second {
 	display: block;
+}
+
+.adminButtons {
+	width: 15vw;
 }

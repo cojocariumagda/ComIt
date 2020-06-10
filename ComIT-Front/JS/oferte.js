@@ -7,17 +7,16 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
 
     Http.onreadystatechange= (e) => {
         let result;
-        console.log(Http.responseText);
-        if(Http.responseText != null) {
-            result = JSON.parse(Http.responseText);
-        }
+        result = JSON.parse(Http.responseText);
         if(result != null) {
             let out = "";
             let i;
             for(i = 0; i < result.length; i++) {
-                out += 'oferte';
+                out += '<div class = "produs"><a target = "_blank" href="' + result[i].link_produs +
+                    '"><img src ="' + result[i].imagine_produs + '" alt = "imagine produs"></a><span class = "nextToImage">Nume: ' +
+                    result[i].nume_produs + '<br>Pret: ' + result[i].pret_produs + '</span></div>';
             }
-            document.getElementById("pret").innerHTML = out;
+            document.getElementById("oferte").innerHTML = out;
         }
     };
 });
