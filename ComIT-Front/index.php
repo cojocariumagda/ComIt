@@ -705,6 +705,9 @@ function login($numar) {
                 <p class = "center">
                     <a target = "_blank" href = "ScholarlyHTML/ScholarlyHTML.html">Aici</a> se poate gasi documentatia.
                 </p>
+                <p class = "center">
+                    <a target = "_blank" href = "Ghid%20de%20utilizare/GhidUtilizare.html">Aici</a> se poate gasi ghidul de utilizare.
+                </p>
 			</div>
 			<div id = "createAccount">
 				<form action="" method = "post">
