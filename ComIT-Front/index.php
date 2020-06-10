@@ -232,7 +232,7 @@ function login($numar) {
 		<meta name = "description" content = "Proiect TW">
 		<meta name = "author" content = "Cernovschi Ioan Valentin, Cojocariu Magda">
 		<meta name = "owner" content = "Cenovschi Ioan Valentin, Cojocariu Magda">
-		<meta name = "keywords" content = "pret, compara, produs, telefon, tableta, pc, laptop, monitor, calculator, carte, Cernovschi Ioan Valentin, Cojocariu Magda">
+		<meta name = "keywords" content = "tw, web, project, infoiasi, pret, compara, produs, telefon, tableta, pc, laptop, monitor, calculator, carte, Cernovschi Ioan Valentin, Cojocariu Magda">
 		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
 		<meta name = "distribution" content = "Global">
 		<link rel = "stylesheet" type = "text/css" href = "CSS/stilIndex.css?d=<?php echo time(); ?>" />
